@@ -496,7 +496,7 @@
 													}"
 													placeholder="Escolha a ação para filtrar a unidade" />
 													<input type="hidden" class="form-control" name="validaAcao" id="validaAcao">
-													</br>
+													<br>
 													<input type="zoom" class="form-control" name="centroCusto_zoom" id="centroCusto_zoom" onChange="mascara()"
 													data-zoom="{												
 														'displayKey':'NOME',
@@ -552,11 +552,11 @@
 </div>					
 <div id="divCaminho">
 
-				<br>AUTORIZAÇÃO <input type="text" name="autoriza1" id="autoriza1"></br>
+				<br>AUTORIZAÇÃO <input type="text" name="autoriza1" id="autoriza1"><br>
 				1° ASSINATURA <input type="text" name="assinatura1" id="assinatura1">
-				<br>2° ASSINATURA <input type="text" name="assinatura2" id="assinatura2"></br>
+				<br>2° ASSINATURA <input type="text" name="assinatura2" id="assinatura2"><br>
 				PERCENTUAL LIMITE LICITAÇÃO <input type="text" name="resultado_limitelicitacao" id="resultado_limitelicitacao">
-				<br>Caminho: <input type="text" name="caminho" id="caminho"></br>
+				<br>Caminho: <input type="text" name="caminho" id="caminho"><br>
 				LIMITE LICITAÇÃO <input type="text" name="limitelicitacao" id="limitelicitacao">
 				
 </div>				
@@ -569,7 +569,7 @@
 					
 				<div class="card">
                 <div class="card-body">
-                <h3 class="card-title">Informação do Rateio</h3>	      
+                <h3 class="card-title">Anexos de Documentos</h3>	      
     <!-- INICIO DOCUMENTO EM PAIFILHO -->
     
     <div class="panel-body">
@@ -577,9 +577,9 @@
 							<div class="col-xs-12 col-sm-12 col-md-12">								
 								<div class="table-condensed">
 									<div class="form-group" id="btn_adicionarChild_docs">
-										<input type="button" onclick="wdkAddChild('tb_docs')" value="Adicionar documentos" class="btn btn-info" customFnDelete="fnCustomDelete(this)"/>
+										<input type="button" onclick="wdkAddChild('tb_docs')" value="Adicionar documentos" class="btn btn-info"/>
 									</div>																					
-									<table border="0" class="table table-striped table-bordered" tablename="tb_docs" id="tb_docs" noaddbutton="true" addbuttonclass="btn btn-info">
+									<table border="0" class="table table-striped table-bordered" tablename="tb_docs" id="tb_docs" noaddbutton="true" customFnDelete="alert('Não pode remove os documentos')" addbuttonclass="btn btn-info">
 										<thead>
 											<tr>
 												<td class="col-xs-1 col-sm-1 col-md-1"><b>Ordem</b></td>
