@@ -1,0 +1,761 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<input type="hidden" name="atividadeAtual" id="atividadeAtual">
+<input type="hidden" name="codigo" id="codigo">
+<input type="hidden" name="userLogado" id="userLogado">
+<input type="hidden" name="usuario" id="usuario">
+<input type="hidden" name="codunidadeusuario" id="codunidadeusuario">
+<input type="hidden" name="titulo" id="titulo">
+<input type="hidden" name="codven" id="codven">
+<input type="hidden" name="codven1" id="codven1">
+<input type="hidden" name="data1" id="data1">
+<input type="hidden" name="codunidade" id="codunidade">
+<input type="hidden" name="UnidadeArquivamento" id="UnidadeArquivamento">
+<input type="hidden" name="codcxa" id="codcxa">
+<input type="hidden" name="serie" id="serie" >
+<input type="hidden" name="CODTB4FAT" 		id="CODTB4FAT"					/>
+<input type="hidden" name="nitensintegrado" 		id="nitensintegrado"					/>
+<input type="hidden" name="nitens" 		id="nitens"					/>
+<input type="hidden" name="origemrecurso" id="origemrecurso">
+<input type="hidden" name="TipoComprometimento" 		id="TipoComprometimento"					/>
+<input type="hidden" name="idFornecedor" id="idFornecedor">
+<input type="hidden" name="tituloComprometimento" id="tituloComprometimento" value="" >
+<input type="hidden" name="coddepartamento" id="coddepartamento" />
+
+<input type="hidden" name="CodEvento" id="CodEvento" />
+<input type="hidden" name="Sistema" id="Sistema" />
+<input type="hidden" name="evento" id="evento" />
+<input type="hidden" name="justificativaOrigem" id="justificativaOrigem" />
+<input type="hidden" name="DataCriacaoOrigem" id="DataCriacaoOrigem" />
+
+
+ <div class="row" id="div_id">
+
+    				<div class="col-md-2">
+						<label for="codigo_fluigOrigem">FLUIG Origem</label>
+<input type="text" class="form-control" name="codigo_fluigOrigem" id="codigo_fluigOrigem" value=""  readonly="true">
+<button class="btn btn-primary" id="idanexos" onclick="anexos('codigo_fluigOrigem')"">Anexos FLUIG Origem</button>
+</div>
+<div class="col-md-2">
+					<label for="codigo_fluig">Codigo FLUIG</label>
+<input type="text" class="form-control" name="codigoFluig" id="codigoFluig" value="" readonly="true">	
+<button class="btn btn-primary" id="idanexos" onclick="anexos('codigoFluig')"">Anexos FLUIG Pagamento</button>			
+</div>
+
+<div class="col-md-4" >
+        
+    <label>Codigo RM PréComprometimento</label>
+    
+   <br><input type="text" class="form-control" name="idmovorigem" id="idmovorigem" value=""  readonly="true" >
+      	
+	</div>
+
+
+    <div class="col-md-4" >
+        
+    <label>Codigo RM</label>
+    
+   <br><input type="text" class="form-control" name="idmov" id="idmov" value="" placeholder="Codigo do RM">
+   <button class="btn btn-primary" id="idGerarRelatorioRM" onclick="GerarRelatorioRM()">Imprimir</button>
+   	
+	</div>
+
+    				
+<div class="col-md-4" id="divtipomovimento">
+	<label for="tipomovimento">Tipo Movimento</label>
+	<select class="form-control" name="tipomovimento" id="tipomovimento" >
+		<option value="I">Incluir</option>
+		<option value="A">AlteraÃ§Ã£o</option>
+		<option value="C">Cancelamento</option>
+		</select>
+</div>
+
+</div>
+
+    			<div class="row">
+				<div class="col-md-4" >
+					<label for="Solicitante">Solicitante</label>
+					<input type="text"
+								class="form-control" name="Solicitante" id="Solicitante"  value="" 
+								data-size="big" maxlength="255" readonly="true" placeholder="UsuÃ¡rio logado que criou este processo">
+				</div>
+				<div class="col-md-4" >
+					<label for="Unidade">Unidade</label>
+					<input type="text"
+								class="form-control" name="Unidade" id="Unidade" value="" 
+								data-size="big" maxlength="255" readonly="true" placeholder="Unidade na qual o usuario esta vinculado">
+				</div>
+				
+</div>
+<div class="row">
+   
+	<div class="col-md-8" id="divlbFornecedor"><label>Fornecedor</label>
+	<input type="text"	class="form-control" name="lbFornecedor" id="lbFornecedor" value="" 
+									data-size="big" maxlength="255" readonly="true" >
+					
+	</div>
+	<div class="col-md-4"><label>Contrato </label>
+		<input type="text" class="form-control" name="lbcontrato" id="lbcontrato" value=""  readonly="true">	
+														<input type="hidden" name="idcontrato" id="idcontrato">
+														<input type="hidden" name="NSEQITMCNT" id="NSEQITMCNT">
+	
+														</div>
+	   
+	</div>
+<div class="row">
+ <div  class="col-xs-4 col-sm-4 col-md-4">
+ 
+<label for="nf">Numero Nota</label>
+<input type="text" class="form-control" name="nf" id="nf" value="" placeholder="Número Nota" data-size="big" maxlength="100">				
+
+</div>
+<div class="col-md-2">
+	<label for="parcela">Parcela</label>
+<input type="text" class="form-control" name="parcela" id="parcela" data-date="" value="">				
+</div>
+							<div class="col-md-2">
+									<label for="DataComprometimento">Data Comprometimento</label>
+				<input type="text" class="form-control" name="DataComprometimento" id="DataComprometimento" data-date="" value="" placeholder="Data na qual irÃÂÃÂ¡ consumir o recurso e serÃÂÃÂ¡ feito o pagamento" data-size="big" maxlength="255">				
+				</div>
+				<div class="col-md-2">
+					<label for="ValorContrato">Valor Contrato</label>
+<input type="text" class="form-control" name="ValorContrato" id="ValorContrato"  value="" readonly="true">				
+</div>
+<div class="col-md-2">
+	<label for="ValorPago">Valor Pago</label>
+<input type="text" class="form-control" name="ValorPago" id="ValorPago"  value="" readonly="true">				
+</div>
+</div>
+
+											
+    <div class="form-field" data-type="textarea" data-show-properties="" data-field-name="justificativa">
+        <div class="form-input">
+            <div class="form-group"><label>Justificativa do Comprometimento</label><textarea id="justificativa" name="justificativa" class="form-control" rows="3" onchange="geratitulo(this);"></textarea></div>
+        </div>
+    </div>
+    
+<!-- INICIO DOCUMENTO EM PAIFILHO -->
+    
+<div class="panel-body">
+	<div class="form-group row">
+		<div class="col-xs-12 col-sm-12 col-md-12">								
+			<div class="table-condensed">
+				<div class="form-group" id="btn_adicionarChild_docs">
+					<input type="button" onclick="wdkAddChild('tb_docs')" value="Adicionar Documentos" class="btn btn-info" customFnDelete="fnCustomDelete(this)"/>
+				</div>																					
+				<table border="0" class="table table-striped table-bordered" tablename="tb_docs" id="tb_docs" noaddbutton="true" addbuttonclass="btn btn-info">
+					<thead>
+						<tr>
+							<td class="col-xs-1 col-sm-1 col-md-1"><b>Ordem</b></td>
+							<td class="col-xs-4 col-sm-4 col-md-4"><b>Documentos</b></td>
+							<td class="col-xs-6 col-sm-6 col-md-6"><b>nome do arquivo</b></td>
+							<td class="col-xs-1 col-sm-1 col-md-1"><b>Ação</b></td>												
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+						
+						<td class="col-xs-1 col-sm-1 col-md-1">
+						
+						<input type="text" class="form-control" name="ORDEMDOCS" id="ORDEMDOCS" onclick="insereitem(this,'tb_docs')">
+																		</td>
+																						<td class="col-xs-4 col-sm-4 col-md-4">							
+<input  type="zoom" class="form-control" name="DOCS" id="DOCS"
+								data-zoom="{												
+									'displayKey':'NOME',
+									'datasetId':'ds_credenciado_docs',
+									'fields':[													
+									{
+									'field':'CODIGO',
+									'visible':'false'
+									},
+										
+									{
+									'field':'NOME',
+									'label':'NOME'
+									}
+									]
+								}"
+								placeholder="Escolha o documento a ser anexado"/>
+								</td>
+																			<td class="col-xs-6 col-sm-6 col-md-6">
+<input type="text" class="form-control" name="CODIGODOCS_filho" id="CODIGODOCS_filho">
+</td>
+<td class="col-xs-1 col-sm-1 col-md-1">	
+<input id="anexar" type="button" onclick="anexadocs(this)" value="Anexar" class="btn btn-info"/>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+<!-- FIM DOCUMENTO EM PAI FILHO -->
+    <div class="panel-body">
+						<div class="form-group row">
+							<div class="col-xs-12 col-sm-12 col-md-12">								
+								<div class="table-condensed">
+									<div class="form-group" id="btn_adicionarChild_rateio">
+										<input type="button" onclick="rateioItem()" value="Adicionar rateio do pagamento" class="btn btn-info" customFnDelete="fnCustomDelete(this)"/>
+									</div>
+									<div class="form-group" id="btn_adicionarChild_rateio_alerta">
+									<label>Não é possivel adicionar rateio pelo FLUIG de comprometimento já integrado, caso necessite, deve gerar o comprovante deste pagamento para usar como modelo para o novo, este deve ser cancelado.</label>
+									</div>																					
+									<table border="0" class="table table-striped table-bordered" tablename="tb_rateio" id="tb_rateio" noaddbutton="true" addbuttonclass="btn btn-info">
+										<thead>
+											<tr>
+											
+												<td class="col-xs-1 col-sm-1 col-md-1"><b>Valor(Sem Pontos, apenas virgula para centavos)</b></td>
+												<td class="col-xs-5 col-sm-5 col-md-5"><strong>Item de Contrato / Serviço </strong></td>
+												<td class="col-xs-6col-sm-6 col-md-6"><b>Projeto/Ação/Unidade</b></td>
+											</tr>
+										</thead>
+				
+										<tbody>
+											<tr>
+												<td class="col-xs-1 col-sm-1 col-md-1">
+													<input type="hidden" class="form-control" name="valorRateio" id="valorRateio">
+													<input type="text" class="form-control" name="valorRatMoeda"  onclick="filtrarateio(this);" onchange="rateio1(this);" id="valorRatMoeda">
+												</td>
+
+											<td class="col-xs-5 col-sm-5 col-md-5">
+
+    <input  type="zoom" class="form-control" name="itemzoom" id="itemzoom"
+													data-zoom="{												
+														'displayKey':'CHAVE',
+														'datasetId':'dsPaiFilhoItensCredenciado',
+														'fields':[													
+														{
+														'field':'item',
+														'visible':'false'
+														},
+															{
+														'field':'CHAVE',
+														'label':'Serviço'
+														},
+														{
+														'field':'codCusto',
+														'visible':'false'
+														},{
+														'field':'codsolicitacao',
+														'visible':'false'
+														},{
+														'field':'codtb1fat',
+														'visible':'false'
+														},{
+														'field':'idproduto',
+														'visible':'false'
+														},{
+														'field':'projeto_zoom',
+														'visible':'false'
+														},{
+														'field':'centroCusto_zoom',
+														'visible':'false'
+														},{
+														'field':'acao_zoom',
+														'visible':'false'
+														},{
+														'field':'servico',
+														'visible':'false'
+														},
+														{
+														'field':'valorRatMoeda',
+														'visible':'false'
+														}
+														]
+													}"
+													/> 
+
+										<input type="hidden" name="codtb1fat" id="codtb1fat"> 
+										<input type="hidden" name="idproduto" id="idproduto"> 
+										<input type="hidden" name="item" id="item"> 
+
+												</td>
+												
+												<td class="col-xs-6 col-sm-6 col-md-6">
+												
+																			
+										<input class="form-control" type="text" name="projeto_zoom" id="projeto_zoom" data-size="big" readonly="true"/>
+										<br>
+										<input class="form-control" type="text" name="acao_zoom" id="acao_zoom" data-size="big" readonly="true"/>
+										<br><input class="form-control" type="text" name="centroCusto_zoom" id="centroCusto_zoom" data-size="big" readonly="true"/>
+													
+													<input type="hidden" class="form-control" name="codCusto" 		id="codCusto">
+													
+												</td>
+
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<div class="row">
+<div  id="_div_totalitens_" class="col-xs-2 col-sm-2 col-md-2">			
+<label for="totalitens">Valor Total do Rateio </label> 
+<input type="text" name="totalitens" 					id="totalitens"	value="0,0"  />
+
+<label for="saldoContrato">Saldo do contrato fixo </label>
+<br>
+<input type="text" name="saldoContrato" id="saldoContrato"	value="0,0"  />
+<br><label for="saldoitenspag">Saldo do Contrato com pagamento atual</label>
+<input type="text" name="saldoitenspag" id="saldoitenspag"	value="0,0"  />
+
+
+</div>
+
+</div>	
+
+
+ <!-- controladoria-->
+				
+ <div class="panel panel-info" id="divpagamentoscontroladoria">
+	<div class="panel-heading ">
+		<h3>
+			<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i>Processo Homologação Pagamento</strong>
+		</h3>
+	</div>
+	
+	<div class="panel-body">
+		<div class="form-group row">
+		
+			<div class="col-xs-2 col-sm-2 col-md-2">
+				<label for="conformecontroladoria">Conforme ?</label>
+				<select class="form-control" name="conformecontroladoria" id="conformecontroladoria">
+					<option value="" selected>Selecione</option>
+					<option value="S">Sim</option>
+					<option value="A">Ajustar</option>
+				</select>
+			</div>
+			
+			<div class="col-xs-7 col-sm-7 col-md-7">
+				<label for="Tcontroladoria">Técnico(a)</label>
+				<input type="text" class="form-control" name="Tcontroladoria" id="Tcontroladoria">
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<label for="parecercontroladoria">Parecer Técnico</label>
+				<textarea class="form-control" name="parecercontroladoria" id="parecercontroladoria" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+			</div>
+			
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- fim controladoria--> 
+ <!-- pagamentos financeiro-->
+				
+ <div class="panel panel-info" id="divpagamentosFINANCEIRO">
+	<div class="panel-heading ">
+		<h3>
+			<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i>Processo Realizar Pagamento</strong>
+		</h3>
+	</div>
+	
+	<div class="panel-body">
+		<div class="form-group row">
+		
+			<div class="col-xs-2 col-sm-2 col-md-2">
+				<label for="pagamentosFINANCEIRO">Pago ?</label>
+				<select class="form-control" name="pagamentosFINANCEIRO" id="pagamentosFINANCEIRO">
+					<option value="" selected>Selecione</option>
+					<option value="S">Sim</option>
+					<option value="A">Ajustar</option>
+				</select>
+			</div>
+			
+			<div class="col-xs-7 col-sm-7 col-md-7">
+				<label for="TpagamentosFINANCEIRO">Técnico(a)</label>
+				<input type="text" class="form-control" name="TpagamentosFINANCEIRO" id="TpagamentosFINANCEIRO">
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<label for="parecerTpagamentosFINANCEIRO">Parecer Técnico</label>
+				<textarea class="form-control" name="parecerTpagamentosFINANCEIRO" id="parecerTpagamentosFINANCEIRO" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+			</div>
+			
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- fim pagamentos financeiro--> 
+
+</form>
+</div>
+
+<script type="text/javascript">
+
+function anexos(campo){
+			//	alert(document.getElementById("codProcesso1").value);
+				window.open('https://fluig.ma.sebrae.com.br/webdeskreport/output?__id=idownloadFrame&__report=file:///C%3A%5Cfluig%5Crepository%5Cwcmdir%5Cwcm%5Ctenants%5Cwcm%5Ctmp%5Cecm%5Creports%5C201472%5C3000%5Crpt_anexos_processosv2176488854944583335.rptdesign&__masterpage=true&__format=html&__cID=1&&__pageoverflow=0&__overwrite=false&Processo='+document.getElementById(campo).value, 'anexosproc');
+			}	
+			function insereitem(campo,tabela){
+				var rows = document.getElementById(tabela).getElementsByTagName("tbody")[0].getElementsByTagName("tr");  
+				var linhas = rows.length -1;
+				//var item= campo.id.split("___");
+				document.getElementById(campo.id).value=linhas;
+				
+			}
+			function anexadocs(ordem){
+				
+				var desc = ordem.name;
+				var iddoc = desc.split("___");
+				//console.log("doc "+ ordem.name+", "+ iddoc[1]+", CODIGODOCS_filho___"+iddoc[1]+", "+document.getElementById("CODIGODOCS_filho___"+iddoc[1]).value);
+						//document.getElementById("CODIGODOCS_filho___"+iddoc).value);
+				
+				
+			showCamera(document.getElementById("CODIGODOCS_filho___"+iddoc[1]).value);
+				
+			//	console.log("doc "+ ordem+", "+ ordem.inputId+", "+ordem.value);
+			}
+
+/*
+if(document.getElementById("tipomovimento").value =="I" || document.getElementById("tipomovimento").value ==""){
+	document.getElementById('btn_adicionarChild_rateio').style.display = 'block';	
+	document.getElementById('btn_adicionarChild_rateio_alerta').style.display = 'none';
+	
+}else{
+	document.getElementById('btn_adicionarChild_rateio').style.display = 'none';
+	document.getElementById('btn_adicionarChild_rateio_alerta').style.display = 'block';
+}*/
+/*
+if(document.getElementById("usuario").value=="734703d0-6da7-44d4-b201-446285adc025"){
+	document.getElementById('mg').style.display = 'block';	
+}else{
+	document.getElementById('mg').style.display = 'none';
+}
+*/
+
+
+
+			function abrirpagamento(campo){
+					window.open ('http://fluigteste.ma.sebrae.com.br/portal/p/1/pageworkflowview?app_ecm_workflowview_processInstanceId=1289', 'popup');
+			}
+			
+			
+
+			function validaServico(campo){
+				var campoName= campo.name;
+				var indice 			= campoName.replace("projeto_zoom___", "");
+				
+				
+				if(document.getElementById("servico___"+ indice).value == ''){
+					alert("favor digite o Tipo de ServiÃ§o que vai ser executado primeiro");
+				}
+				
+			}
+			
+			function filtrarateio(campo){
+				//alert(campo.id);
+			//	alert(document.getElementById("codigo_fluigOrigem").value);
+				var n = campo.id.split("___");
+
+				reloadZoomFilterValues("itemzoom___"+n[1], "codsolicitacao,"+document.getElementById("codigo_fluigOrigem").value  );	
+			}
+
+			function rateioItem(){
+				wdkAddChild('tb_rateio');
+
+//				reloadZoomFilterValues(nomeCampoFiltro, "codsolicitacao,"+document.getElementById("codigo_fluigOrigem").value  );	
+			}
+
+			function rateio1(campo){
+
+
+			    var campoName		= campo.name;
+				var indice 			= campoName.replace("valorRatMoeda___", "");
+				
+				var valorRateio		= campo.value;
+				document.getElementById("valorRateio___" + indice).value=valorRateio.replace("R$","").replace(".","").replace(",",".");
+				document.getElementById("valorRatMoeda___" + indice).value=formatMoeda(valorRateio.replace("R$","").replace(".","").replace(".","").replace(",","."));
+				calculaTotalGeral();
+				
+			}
+
+			function calculaTotalGeral(){
+				//totalItem
+				
+				
+				var rows = document.getElementById("tb_rateio").getElementsByTagName("tbody")[0].getElementsByTagName("tr");  
+				var linhas = rows.length -1;
+				var totalGeral = 0.00
+				var num =0;
+				var vl=0.00
+								
+				
+				for (var i = 1; i <= 100; i++) {
+					
+					
+					if(document.getElementById("valorRateio___" + (i)) !== undefined){
+						num++;
+						vl=document.getElementById("valorRateio___" + (i)).value;
+						totalGeral += parseFloat(vl);
+						if(num >= linhas){
+							break;
+						}
+					}
+					
+				}
+				document.getElementById("totalitens").value = formatMoeda(totalGeral);
+				//document.getElementById("totalitenspag").value = formatMoeda(totalGeral+parseFloat(document.getElementById("totalitenspag").value.replace(".","").replace(",",".")));
+				document.getElementById("saldoitenspag").value = formatMoeda(parseFloat(document.getElementById("saldoContrato").value.replace(".","").replace(",","."))-parseFloat(document.getElementById("totalitens").value.replace(".","").replace(",",".")));
+
+			}
+			
+
+			function mostraLista(item){
+				var selecionado = item.name;
+				var indice = selecionado.replace("btnat___", "");
+				document.getElementById('nd'+indice).style.display = 'block';
+				document.getElementById('nu'+indice).style.display = 'none';
+
+			}
+			
+			function setSelectedZoomItem(selectedItem) {
+				
+							
+				var selecionado = selectedItem.inputId;
+				var itemzoomSelec	= selecionado.replace("itemzoom___", "");
+				var itemzoom			= "itemzoom___" + itemzoomSelec;
+				//alert(indicedep);
+								
+				
+				if(selectedItem.inputId == itemzoom){
+					
+					document.getElementById("codCusto___" 	+ itemzoomSelec).value =  selectedItem["codCusto"];
+					document.getElementById("codtb1fat___" 	+ itemzoomSelec).value =  selectedItem["codtb1fat"];
+					document.getElementById("idproduto___" 	+ itemzoomSelec).value =  selectedItem["idproduto"];
+					document.getElementById("projeto_zoom___" 	+ itemzoomSelec).value =  selectedItem["projeto_zoom"];
+					document.getElementById("centroCusto_zoom___" 	+ itemzoomSelec).value =  selectedItem["centroCusto_zoom"];
+					document.getElementById("acao_zoom___" 	+ itemzoomSelec).value =  selectedItem["acao_zoom"];
+					document.getElementById("item___" 	+ itemzoomSelec).value =  selectedItem["item"];
+					
+				//	document.getElementById("valorRatMoeda___" 	+ itemzoomSelec).value =  selectedItem["valorRatMoeda"];
+
+				}
+					
+								
+				
+			}
+			
+				var keyDown = false, ctrl = 17, vKey = 86, Vkey = 118; 
+				  
+				$(document).keydown(function (e) {
+					if (e.keyCode == ctrl) keyDown = true;
+				}).keyup(function (e) {
+					if (e.keyCode == ctrl) keyDown = false;
+				});
+				
+				$('[data-only-numbers]').on('keypress', function (e) {
+				    if (!e) {
+					    var e = window.event;
+					}
+					
+				    if (e.keyCode > 0 && e.which == 0) {
+				    	 return true;
+					}
+					
+				    if (e.keyCode) {
+				        code = e.keyCode;
+					} else if (e.which) {
+				    	code = e.which;
+					}
+
+					if(code == 46) {
+						return true;
+					}
+					
+				    var character = String.fromCharCode(code);
+				    if (character == '\b' || character == ' ' || character == '\t') {
+				    	 return true;
+					}
+				    if (keyDown && (code == vKey || code == Vkey)) {
+				    	return (character);
+					} else  {
+						return (/[0-9]$/.test(character));
+					}
+				}).on('focusout', function (e) {
+				    var $this = $(this);
+					if($this.val() == "") {
+						return true;
+					}
+				    $this.val($this.val().replace(/[^0-9\.]/g, ''));
+				}).on('paste', function (e) {
+				    var $this = $(this);
+				    setTimeout(function () {
+				        $this.val($this.val().replace(/[^0-9\.]/g, ''));
+				    }, 5);
+				 });				
+
+				
+
+				$('.create-form-components').on('keyup', 'input[required="required"][type="text"], input[required="required"][type="number"], input[required="required"][type="date"], textarea[required="required"]', function(){
+					validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
+				});
+
+				$('.create-form-components').on('change', 'input[required="required"][type="checkbox"], input[required="required"][type="radio"], select[required="required"]', function(){
+					validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
+				});
+
+				function validationFieldsForm(field, type){
+					if(type === "checkbox" || type === "radio"){
+						if(!field.is(':checked')){
+							field.parents('.form-field').addClass('required');
+						}else{
+							field.parents('.form-field').removeClass('required');
+						}
+					}else{
+						if(!field.val().trim()){
+							field.parents('.form-field').addClass('required');
+						}else{
+							field.parents('.form-field').removeClass('required');
+						}
+					}
+				}
+
+				var $zoomPreview = $(".zoom-preview");
+				if ($zoomPreview.length) {
+                    $zoomPreview.parent().removeClass("input-group");
+                    $zoomPreview.remove();
+                }
+
+				var ratings = $(".rating");
+				if (ratings.length > 0) ratingStars(ratings);
+				function ratingStars(stars) {
+					$.each(stars, function(i, obj) {
+                        var field = $(this).closest(".form-group").find(".rating-value");
+						var tgt = $(obj);
+						tgt.html("");
+						var rating = FLUIGC.stars(tgt, { value: field.val() });
+                        rating.on("click", function(o) {
+                            field.val($(this).index() + 1);
+                        });
+					});
+				}
+
+				$.each($("[data-date]"), function(i, o) {
+                    var id = $(o).attr("id");
+					FLUIGC.calendar("#" + id);
+				});
+
+				$(document).ready(function() {
+					$.each($("[data-date]"), function(i, o) {
+	                    var id = $(o).attr("id");
+	                    if($("#" + id).attr("readonly")) {
+	                    	$("#" + id).data('DateTimePicker').disable();
+	                    }
+					});
+				});
+				
+				/*FunÃÂÃÂ§ÃÂÃÂ£o para formatar numero em moeda*/
+				function formatMoeda(valor){
+					
+					var v = valor.toString();	
+					
+					if (v != ""){
+						
+						var aValores = v.split('.');
+						if (aValores.length <= 1)
+							v += '00';
+						else{
+							if (aValores[1].toString().length <= 1)
+								v = aValores[0].toString() + aValores[1].toString() + '0';
+							else{
+								
+								//Formata valor em 2 casas decimais
+								var valor = parseFloat(v);
+								valor = valor.toFixed(2);
+								v = valor.toString();
+							}
+						}
+					}
+							
+					v=v.replace(/\D/g,""); // permite digitar apenas numero 
+					v=v.replace(/(\d{1})(\d{14})$/,"$1.$2"); 	// coloca ponto antes dos ultimos digitos 
+					v=v.replace(/(\d{1})(\d{11})$/,"$1.$2"); 	// coloca ponto antes dos ultimos 11 digitos 
+					v=v.replace(/(\d{1})(\d{8})$/,"$1.$2"); 	// coloca ponto antes dos ultimos 8 digitos 
+					v=v.replace(/(\d{1})(\d{5})$/,"$1.$2"); 	// coloca ponto antes dos ultimos 5 digitos 
+					v=v.replace(/(\d{1})(\d{1,2})$/,"$1,$2"); 	// coloca virgula antes dos ultimos 2 digitos 
+						
+					return v;
+				}
+				
+				function pegaUnidade(){
+					
+					var constraintDs_RM_movimentos_serie1 = DatasetFactory.createConstraint('CODTMV', document.getElementById("TipoComprometimento").value, document.getElementById("TipoComprometimento").value, ConstraintType.MUST);
+					var datasetDs_RM_movimentos_serie = DatasetFactory.getDataset('ds_RM_movimentos_serie', null, new Array(constraintDs_RM_movimentos_serie1), null);
+					var serie=datasetDs_RM_movimentos_serie.values[0];
+					document.getElementById("serie").value =  serie["SERIE"];
+					
+				}
+				
+				function geratitulo(campo){
+					
+					document.getElementById("tituloComprometimento").value = document.getElementById("tituloComprometimento").value+", "+campo.value;
+				}
+				
+				function GerarRelatorioRM() {
+					
+					// cria uma nova janela para exibiÃÂÃÂ§ÃÂÃÂ£o do conteÃÂÃÂºdo do relatÃÂÃÂ³rio em PDF
+					newWindow = window.open('RMReports', 'pagina');
+					newWindow.document.write("<iframe id='iFrameReport' width='100%' height='100%' src='" + getBytesRMReport() + "'></iframe>");
+				}
+				
+				function AJUDA() {
+					
+					// cria uma nova janela para exibiÃÂÃÂ§ÃÂÃÂ£o do conteÃÂÃÂºdo do relatÃÂÃÂ³rio em PDF
+					newWindow = window.open('AJUDA', 'https://fluig.ma.sebrae.com.br/portal/p/1/ecmnavigation?app_ecm_navigation_doc=116701');
+					newWindow.document.write("<iframe id='iFrameReport' width='100%' height='100%' src='https://fluig.ma.sebrae.com.br/portal/p/1/ecmnavigation?app_ecm_navigation_doc=116701'></iframe>");
+				}
+
+
+
+
+				
+				
+				function getBytesRMReport() {
+				//var codigo=""; 
+					var codigo = document.getElementById("codigo").value;
+					// Constraint com o identificador do boleto que serÃÂÃÂ¡ utilizado para geraÃÂÃÂ§ÃÂÃÂ£o do realtÃÂÃÂ³rio
+					
+					var IdBoleto = DatasetFactory.createConstraint("Idpagamento", ""+codigo+"" , ""+codigo+"" , ConstraintType.MUST);
+					
+					var constraints = new Array(IdBoleto);
+
+					var resultado = "";
+
+					// dsRelatorioWs ÃÂÃÂ© identificador do DataSet exportado para o Fluig
+					var dataset = DatasetFactory.getDataset("ds_rm_rpt_pagamento", null, constraints, null);
+					var wsReport = dataset.values[0];
+
+					// seta o formato de abertura da string base 64 retornada pelo Web Service do RM Reports para PDF
+					if (dataset.values.length == 1) {
+						resultado = "data:application/pdf;base64, " + wsReport["RELATORIO"];
+						
+						
+					}
+
+					return resultado;
+				}
+				
+			</script>
+</body>
+</html>

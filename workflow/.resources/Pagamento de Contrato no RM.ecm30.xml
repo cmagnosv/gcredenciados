@@ -1,0 +1,2698 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>Pagamento de Contrato no RM</processId>
+    </processDefinitionPK>
+    <processDescription>PagamentoContratoRM</processDescription>
+    <instruction></instruction>
+    <active>true</active>
+    <publicProcess>true</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId></categoryId>
+    <managerEngineAllocationId></managerEngineAllocationId>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>1</complementsLevel>
+    <notifyRequisitionerComplements>true</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <deadlineTime>0</deadlineTime>
+    <warningDeadlineTime>0</warningDeadlineTime>
+    <notifyAuthorityComplements>true</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>PagamentoContratoRM</processId>
+      <version>37</version>
+    </processDefinitionVersionPK>
+    <versionDescription></versionDescription>
+    <formId>204407</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>2</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>false</inheritFormSecurity>
+    <mobileReady>true</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </processStatePK>
+      <stateName>Inclusão de Pagamento de Contrato</stateName>
+      <stateDescription>Inclusão de Pagamento de Contrato</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>110</positionX>
+      <positionY>40</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId>Default</periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>5</sequence>
+      </processStatePK>
+      <stateName>Integração RM (Inclui/Altera/Cancela) parcela</stateName>
+      <stateDescription>Integração RM (Inclui/Altera/Cancela) parcela</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>0</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>250</positionX>
+      <positionY>138</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>82</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>1</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>8</sequence>
+      </processStatePK>
+      <stateName>Suporte TIC</stateName>
+      <stateDescription>Suporte TIC</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;SuporteDesenvolvimento&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>530</positionX>
+      <positionY>152</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>11</sequence>
+      </processStatePK>
+      <stateName>Alteração</stateName>
+      <stateDescription>Alteração</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;4&lt;/BaseActivity&gt;&lt;Returns&gt;All&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>420</positionX>
+      <positionY>30</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>26</sequence>
+      </processStatePK>
+      <stateName>Pagamento de contrato</stateName>
+      <stateDescription>Pagamento de contrato</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;homologacao_processos&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>410</positionX>
+      <positionY>370</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>35</sequence>
+      </processStatePK>
+      <stateName>Reduz Comprometimento</stateName>
+      <stateDescription>Reduz Comprometimento</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>80</positionX>
+      <positionY>138</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>82</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>1</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>44</sequence>
+      </processStatePK>
+      <stateName>Homologa Pagamento</stateName>
+      <stateDescription>Homologa Pagamento</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;homologacao_processos&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>250</positionX>
+      <positionY>257</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>7</sequence>
+      </processStatePK>
+      <stateName>Erro de Integração</stateName>
+      <stateDescription>Erro de Integração</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>342</positionX>
+      <positionY>190</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>43</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>5</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>36</sequence>
+      </processStatePK>
+      <stateName>Intermediário</stateName>
+      <stateDescription>Intermediário</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>155</positionX>
+      <positionY>198</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>43</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>35</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>46</sequence>
+      </processStatePK>
+      <stateName>Homologado</stateName>
+      <stateDescription>Homologado</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>270</positionX>
+      <positionY>354</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>49</sequence>
+      </processStatePK>
+      <stateName>Pago?</stateName>
+      <stateDescription>Pago?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>580</positionX>
+      <positionY>354</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>15</sequence>
+      </processStatePK>
+      <stateName>Cancelado</stateName>
+      <stateDescription>Cancelado</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>840</positionX>
+      <positionY>40</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>31</sequence>
+      </processStatePK>
+      <stateName>Pago</stateName>
+      <stateDescription>Pago</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>850</positionX>
+      <positionY>387</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>37</version>
+        <sequence>46</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;conformecontroladoria&quot;) ==&quot;S&quot;</condition>
+      <destinationSequenceId>26</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;homologacao_processos&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>37</version>
+        <sequence>46</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;conformecontroladoria&quot;) ==&quot;A&quot;</condition>
+      <destinationSequenceId>11</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;homologacao_processos&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>37</version>
+        <sequence>49</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;pagamentosFINANCEIRO&quot;) ==&quot;S&quot;</condition>
+      <destinationSequenceId>31</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;homologacao_processos&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>37</version>
+        <sequence>49</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;pagamentosFINANCEIRO&quot;) ==&quot;A&quot;</condition>
+      <destinationSequenceId>11</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;homologacao_processos&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+  </list>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>10</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>8</initialStateSequence>
+      <finalStateSequence>5</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>19</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>11</initialStateSequence>
+      <finalStateSequence>8</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>20</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>7</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>29</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>8</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>33</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>11</initialStateSequence>
+      <finalStateSequence>15</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>37</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>36</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>39</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>35</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>40</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>11</initialStateSequence>
+      <finalStateSequence>35</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>41</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>35</initialStateSequence>
+      <finalStateSequence>5</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>45</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>5</initialStateSequence>
+      <finalStateSequence>44</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>47</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>44</initialStateSequence>
+      <finalStateSequence>46</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>48</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>46</initialStateSequence>
+      <finalStateSequence>26</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>50</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>26</initialStateSequence>
+      <finalStateSequence>49</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>51</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>49</initialStateSequence>
+      <finalStateSequence>31</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>52</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>49</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <linkSequence>53</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>46</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>servicetask35</eventId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function servicetask35(attempt, message) {
+	 try {
+		 var numSolicitacao			= getValue(&quot;WKNumProces&quot;);
+		 var tipomovimento 			=  hAPI.getCardValue(&quot;tipomovimento&quot;);
+		 var saldoitenspag 			=  parseFloat(hAPI.getCardValue(&quot;saldoitenspag&quot;));
+		 var chaveOrigem				= hAPI.getCardValue(&quot;codigo_fluigOrigem&quot;);
+		 
+		 var constraintDsPaiFilhoItensCredenciado1 = DatasetFactory.createConstraint(&apos;CHAVE&apos;, hAPI.getCardValue(&quot;codigo_fluigOrigem&quot;), hAPI.getCardValue(&quot;codigo_fluigOrigem&quot;), ConstraintType.MUST);
+		 var datasetDsPaiFilhoItensCredenciado = DatasetFactory.getDataset(&apos;dsPaiFilhoItensCredenciado&apos;, null, new Array(constraintDsPaiFilhoItensCredenciado1), null);
+		 chaveOrigem				= String(chaveOrigem).split(&quot;.&quot;);
+		 chaveOrigem 				= &quot;FLUIG-&quot; +chaveOrigem[3];
+		// log.warn(&quot;chaveorigem: &quot; + chaveOrigem+&quot;=&gt; chaveorigemM &quot;+chaveOrigemM);
+			var atividade = getValue(&quot;WKNumState&quot;);
+		
+		    var ds_chave_rm 	= DatasetFactory.getDataset(&quot;ds_chave_rm&quot;, null, null, null);
+			var chave			= ds_chave_rm.getValue(0, &quot;CHAVE&quot;);
+			var codColigada		= ds_chave_rm.getValue(0, &quot;CODCOLIGADA&quot;);
+
+		 // alteração
+		 if(saldoitenspag&gt;0){
+				 	var status		 			= &quot;A&quot;;
+					var operacao				= &quot;A&quot;;
+			 }else{
+				 	var status		 			= &quot;A&quot;;
+					var operacao				= &quot;C&quot;;
+			 }
+			
+			/*VARIAVEIS INT_TMOV_IMP*/
+				
+			var dataInsercao			= hAPI.getCardValue(&quot;DataCriacaoOrigem&quot;);
+			var dataTransacao			= dataInsercao;
+			var codDepartamento			= hAPI.getCardValue(&quot;coddepartamento&quot;);
+			
+/*			var codFilial				= &quot;1&quot;;
+			var codLoc					= &quot;01&quot;;
+			var codCfo					= hAPI.getCardValue(&quot;idFornecedor&quot;);
+			var serie           		= hAPI.getCardValue(&quot;serie&quot;);
+			var codTMV					= hAPI.getCardValue(&quot;TipoComprometimento&quot;); 
+			var movImpresso   			= &quot;1&quot;;
+			var docImpresso   			= &quot;0&quot;;
+			var fatImpressa   			= &quot;0&quot;;
+			var dataEmissao				= hAPI.getCardValue(&quot;DataComprometimento&quot;);
+			var dataSaida				= hAPI.getCardValue(&quot;DataComprometimento&quot;);
+			var codMoedaVl    			= &quot;R$&quot;;
+			var codColCfo				= codColigada;
+			var geradoPorLote			= &quot;0&quot;;
+			var gerouConta				= &quot;0&quot;;
+			var geradoPorContaTrabalho	= &quot;0&quot;;
+			var gerouContaTrabalho		= &quot;0&quot;;
+			var codCpg					= &quot;01&quot;;
+			var campoLivre1  			= chaveOrigem;
+			var campoLivre2  			= hAPI.getCardValue(&quot;tituloComprometimento&quot;);
+			var codVend1      			= hAPI.getCardValue(&quot;codVen&quot;);
+			var idcontrato      			= hAPI.getCardValue(&quot;idcontrato&quot;);
+			var idseqcnt	= 0;
+			var dsccontrato = &quot;&quot;;
+			var dscnf =&quot;&quot;;
+			var codcxa =  hAPI.getCardValue(&quot;codcxa&quot;); 
+			if(codTMV==&quot;1.1.87&quot;){
+				dsccontrato= &quot;&lt;IDCNT&gt;&quot;+idcontrato+&quot;&lt;/IDCNT&gt;&quot;;		
+				idseqcnt = hAPI.getCardValue(&quot;NSEQITMCNT&quot;);
+				};
+				if(codTMV==&quot;1.2.07&quot;){
+				
+				dscnf=&quot;&lt;NUMEROMOV&gt;&quot;+hAPI.getCardValue(&quot;nf&quot;)+&quot;&lt;/NUMEROMOV&gt;&quot;		
+				}*/
+			/*VARIAVEIS INT_TMOVCOMPL_IMP*/          
+			var origemPagamento	= &quot;&quot;; //010 =&gt; credenciamento
+
+			/*VARIAVEIS INT_TMOVHISTORICO_IMP*/ 
+			var historicoCurtoTmovHis	= hAPI.getCardValue(&quot;justificativaOrigem&quot;); 
+			var historicoLongoTmovHis	= historicoCurtoTmovHis;
+
+			//Construcao da primeira parte do xml INT_TMOV_IMP, INT_TMOVCOMPL_IMP, INT_TMOVHISTORICO_IMP
+			var xml	=  &quot;\n&quot; +
+			
+						&quot;&lt;NewDataSet&gt;&quot;																		+ &quot;\n&quot; +
+							&quot;&lt;INT_TMOV_IMP&gt;&quot;																+ &quot;\n&quot; +
+							&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;										+ &quot;\n&quot; +
+							&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;									+ &quot;\n&quot; +
+							/* &quot;&lt;CODFILIAL&gt;&quot;+codFilial+&quot;&lt;/CODFILIAL&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;CODLOC&gt;&quot;+codLoc+&quot;&lt;/CODLOC&gt;&quot;													+ &quot;\n&quot; +
+							&quot;&lt;CODCFO&gt;&quot;+codCfo+&quot;&lt;/CODCFO&gt;&quot;													+ &quot;\n&quot; +
+							&quot;&lt;SERIE&gt;&quot;+serie+&quot;&lt;/SERIE&gt;&quot;														+ &quot;\n&quot; +
+							&quot;&lt;CODTMV&gt;&quot;+codTMV+&quot;&lt;/CODTMV&gt;&quot;													+ &quot;\n&quot; +
+							&quot;&lt;MOVIMPRESSO&gt;&quot;+movImpresso+&quot;&lt;/MOVIMPRESSO&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;DOCIMPRESSO&gt;&quot;+docImpresso+&quot;&lt;/DOCIMPRESSO&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;FATIMPRESSA&gt;&quot;+fatImpressa+&quot;&lt;/FATIMPRESSA&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;DATAEMISSAO&gt;&quot;+dataEmissao+&quot;&lt;/DATAEMISSAO&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;DATASAIDA&gt;&quot;+dataSaida+&quot;&lt;/DATASAIDA&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;DATAENTREGA&gt;&quot;+dataSaida+&quot;&lt;/DATAENTREGA&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;PRAZOENTREGA&gt;0&lt;/PRAZOENTREGA&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;CODMOEVALORLIQUIDO&gt;&quot;+codMoedaVl+&quot;&lt;/CODMOEVALORLIQUIDO&gt;&quot;						+ &quot;\n&quot; +
+							&quot;&lt;CODCOLCFO&gt;&quot;+codColCfo+&quot;&lt;/CODCOLCFO&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;GERADOPORLOTE&gt;&quot;+geradoPorLote+&quot;&lt;/GERADOPORLOTE&gt;&quot;								+ &quot;\n&quot; +
+							//&quot;&lt;CODDEPARTAMENTO&gt;&quot;+codDepartamento+&quot;&lt;/CODDEPARTAMENTO&gt;&quot;						+ &quot;\n&quot; +
+							&quot;&lt;GEROUCONTATRABALHO&gt;&quot;+gerouConta+&quot;&lt;/GEROUCONTATRABALHO&gt;&quot;						+ &quot;\n&quot; +
+							&quot;&lt;GERADOPORCONTATRABALHO&gt;&quot;+geradoPorContaTrabalho+&quot;&lt;/GERADOPORCONTATRABALHO&gt;&quot;	+ &quot;\n&quot; +
+							&quot;&lt;CODCPG&gt;&quot;+codCpg+&quot;&lt;/CODCPG&gt;&quot;													+ &quot;\n&quot; +
+							&quot;&lt;CAMPOLIVRE1&gt;&quot;+campoLivre1+&quot;&lt;/CAMPOLIVRE1&gt;&quot;									+ &quot;\n&quot; +
+							// &quot;&lt;CAMPOLIVRE2&gt;&quot;+campoLivre2+&quot;&lt;/CAMPOLIVRE2&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;CODVEN1&gt;&quot;+codVend1+&quot;&lt;/CODVEN1&gt;&quot;												+ &quot;\n&quot; +
+							&quot;&lt;CODCXA&gt;&quot;+codcxa+&quot;&lt;/CODCXA&gt;&quot;												+ &quot;\n&quot; +
+							
+							dscnf + &quot;\n&quot; +
+							*/	
+						&quot;&lt;/INT_TMOV_IMP&gt;&quot;																	+ &quot;\n\n&quot; +
+			
+						&quot;&lt;INT_TMOVCOMPL_IMP&gt;&quot;																+ &quot;\n&quot; +
+							&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;										+ &quot;\n&quot; +
+							&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;ORIGEMPAG&gt;&quot;+origemPagamento+&quot;&lt;/ORIGEMPAG&gt;&quot;									+ &quot;\n&quot; +
+						&quot;&lt;/INT_TMOVCOMPL_IMP&gt;&quot;																+ &quot;\n\n&quot; +
+
+						&quot;&lt;INT_TMOVHISTORICO_IMP&gt;&quot;															+ &quot;\n&quot; +
+							&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;										+ &quot;\n&quot; +
+							&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;HISTORICOCURTO&gt;&quot;+historicoCurtoTmovHis+&quot;&lt;/HISTORICOCURTO&gt;&quot;					+ &quot;\n&quot; +
+							&quot;&lt;HISTORICOLONGO&gt;&quot;+historicoLongoTmovHis+&quot;&lt;/HISTORICOLONGO&gt;&quot;					+ &quot;\n&quot; +
+						&quot;&lt;/INT_TMOVHISTORICO_IMP&gt;&quot;;
+			
+		
+			//RATEIO GLOBAL
+			//log.warn(&quot;antes do laço: numero de loops &quot; + datasetDsPaiFilhoItensCredenciado.rowsCount);
+			var i =1;
+			for (var key = 0; key &lt; datasetDsPaiFilhoItensCredenciado.rowsCount; key++) {
+				
+				
+					/*VARIAVEIS INT_TMOVRATCCU_IMP*/                      
+					var codCentroCusto	= datasetDsPaiFilhoItensCredenciado.getValue(key,&quot;CodCusto&quot;);
+					var valorRateio		=  datasetDsPaiFilhoItensCredenciado.getValue(key,&quot;valorRatMoeda&quot;);
+					var vlRateioAtual = hAPI.getCardValue(&quot;valorRatMoeda&quot; + &quot;___&quot;+ datasetDsPaiFilhoItensCredenciado.getValue(key,&quot;item&quot;));
+					if(vlRateioAtual==null){
+						vlRateio=parseFloat(valorRateio);
+					}else{
+						var vlRateio		= parseFloat(valorRateio)-parseFloat(vlRateioAtual);
+					}
+					
+					
+					log.warn(&quot;dentro do laço: numero de loops, key &quot; + key+&quot;=&gt;  vlRateioAtual &quot;+vlRateioAtual+&quot; =&gt; vlRateio &quot;+vlRateio);
+				//	var historicoTmov	= &quot;1&quot;;
+
+					//Construcao da segunda parte do XML INT_TMOVRATCCU_IMP					
+					var xml = xml + &quot;\n\n&quot; +
+					
+									&quot;&lt;INT_TMOVRATCCU_IMP&gt;&quot;											+ &quot;\n&quot; +
+										&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +
+										&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +
+										&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +
+										&quot;&lt;DATATRANSACAO_INT&gt;&quot;+dataTransacao+&quot;&lt;/DATATRANSACAO_INT&gt;&quot;	+ &quot;\n&quot; +
+										&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +
+										&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +
+										&quot;&lt;CODCCUSTO&gt;&quot;+codCentroCusto+&quot;&lt;/CODCCUSTO&gt;&quot;					+ &quot;\n&quot; +
+										&quot;&lt;VALOR&gt;&quot;+vlRateio+&quot;&lt;/VALOR&gt;&quot;								+ &quot;\n&quot; +
+										//&quot;&lt;HISTORICO&gt;&quot;+historicoTmov+&quot;&lt;/HISTORICO&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;/INT_TMOVRATCCU_IMP&gt;&quot;;
+				i++;
+				}
+			
+			
+			/*Itens do Pedido*/		
+			var nseqitmmov		= 1;
+			//var idprodutoanterior=0;
+
+			for (var key = 0; key &lt; datasetDsPaiFilhoItensCredenciado.rowsCount; key++) {
+
+					/*VARIAVEIS INT_TITMMOV_IMP*/                
+					var idPrd					= datasetDsPaiFilhoItensCredenciado.getValue(key,&quot;idproduto&quot;); 
+					//hAPI.getCardValue(&quot;idproduto&quot; 		+ &quot;___&quot; + row);
+				//	var codtb1fat				= hAPI.getCardValue(&quot;codtb1fat&quot; 	+ &quot;___&quot; + row);
+				
+					var quantidade				= 1;
+					var precoUnitario			= datasetDsPaiFilhoItensCredenciado.getValue(key,&quot;valorRatMoeda&quot;);
+					var valorRateio		=  datasetDsPaiFilhoItensCredenciado.getValue(key,&quot;valorRatMoeda&quot;);
+					var vlRateioAtual = hAPI.getCardValue(&quot;valorRatMoeda&quot; + &quot;___&quot;+ datasetDsPaiFilhoItensCredenciado.getValue(key,&quot;item&quot;));
+					
+					if(vlRateioAtual==null){
+						vlRateio=parseFloat(valorRateio);
+					}else{
+						var vlRateio		= parseFloat(valorRateio)-parseFloat(vlRateioAtual);
+					}
+					
+					
+					//var vlRateio		= parseFloat(precoUnitario)-parseFloat(vlRateioAtual);
+					var valorTotalItem			= parseFloat(precoUnitario)-parseFloat(vlRateioAtual);
+					//vlTotalItemMoeda			= formatMoeda(valorTotalItem);
+					var Nnseqitmcnt				= nseqitmmov;
+					var dataEmissao				= dataInsercao;
+				//	var codFilial				= &quot;1&quot;;
+				//	var historicoCurtoTitmov	= &quot;1&quot;;
+					//var codcoltborcam			= &quot;1&quot;;
+				//	var codtborcamento			= &quot;001&quot;;
+					// var codTb2Fat				= hAPI.getCardValue(&quot;origemrecurso&quot;);
+					//if(idprodutoanterior != idPrd){
+					
+				//	vlTotalItemMoeda
+//					var codDepartamento			= &quot;01&quot;;
+					//var codDepartamento			= &quot;1000&quot;;
+					
+					//Construcao da terceira parte do XML INT_TITMMOV_IMP, INT_TITMMOVHISTORICO_IMP					
+					xml = xml+  &quot;\n\n&quot; +
+					
+								&quot;&lt;INT_TITMMOV_IMP&gt;&quot;+ &quot;\n&quot; +
+									&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +
+									&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +
+									&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +
+									&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +
+									//&quot;&lt;NSEQITMCNT&gt;&quot;+idseqcnt+&quot;&lt;/NSEQITMCNT&gt;&quot;					+ &quot;\n&quot; +
+								// &lt;CODTB1FAT&gt;&quot;+codtb1fat+&quot;&lt;/CODTB1FAT&gt;&quot;						+ &quot;\n&quot; +
+									&quot;&lt;IDPRD&gt;&quot;+idPrd+&quot;&lt;/IDPRD&gt;&quot;									+ &quot;\n&quot; +
+									&quot;&lt;QUANTIDADE&gt;&quot;+quantidade+&quot;&lt;/QUANTIDADE&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;PRECOUNITARIO&gt;&quot;+vlRateio+&quot;&lt;/PRECOUNITARIO&gt;&quot;			+ &quot;\n&quot; +
+								//	&quot;&lt;CODCOLTBORCAMENTO&gt;&quot;+codColigada+&quot;&lt;/CODCOLTBORCAMENTO&gt;&quot;	+ &quot;\n&quot; +
+								//	&quot;&lt;CODTBORCAMENTO&gt;&quot;+codtborcamento+&quot;&lt;/CODTBORCAMENTO&gt;&quot;		+ &quot;\n&quot; +
+								//	&quot;&lt;DATAEMISSAO&gt;&quot;+dataEmissao+&quot;&lt;/DATAEMISSAO&gt;&quot;				+ &quot;\n&quot; +
+									&quot;&lt;QUANTIDADEARECEBER&gt;&quot;+quantidade+&quot;&lt;/QUANTIDADEARECEBER&gt;&quot;	+ &quot;\n&quot; +
+									&quot;&lt;VALORTOTALITEM&gt;&quot;+vlRateio+&quot;&lt;/VALORTOTALITEM&gt;&quot;		+ &quot;\n&quot; +
+								//	&quot;&lt;CODFILIAL&gt;&quot;+codFilial+&quot;&lt;/CODFILIAL&gt;&quot;						+ &quot;\n&quot; +
+									&quot;&lt;NSEQITMMOV&gt;&quot;+nseqitmmov+&quot;&lt;/NSEQITMMOV&gt;&quot;					+ &quot;\n&quot; +
+							//		&quot;&lt;CODTB2FAT&gt;&quot;+codTb2Fat+&quot;&lt;/CODTB2FAT&gt;&quot;						+ &quot;\n&quot; +
+								//	&quot;&lt;CODDEPARTAMENTO&gt;&quot;+codDepartamento+&quot;&lt;/CODDEPARTAMENTO&gt;&quot;	+ &quot;\n&quot; +
+							//		dsccontrato+ &quot;\n&quot; +			
+								&quot;&lt;/INT_TITMMOV_IMP&gt;&quot;											+ &quot;\n\n&quot; +
+
+								&quot;&lt;INT_TITMMOVHISTORICO_IMP&gt;&quot;									+ &quot;\n&quot; +
+									&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +
+									&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +
+									&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +
+									&quot;&lt;NSEQITMMOV&gt;&quot;+nseqitmmov+&quot;&lt;/NSEQITMMOV&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;HISTORICOCURTO&gt;&quot;+historicoCurtoTmovHis+&quot;&lt;/HISTORICOCURTO&gt;&quot;	+ &quot;\n&quot; +
+									&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +
+								&quot;&lt;/INT_TITMMOVHISTORICO_IMP&gt;&quot;;
+				
+							
+							/*VARIAVEIS INT_TMOVRATCCU_IMP*/                      
+							var codCentroCustoProd	=datasetDsPaiFilhoItensCredenciado.getValue(key,&quot;CodCusto&quot;);
+							//var percentual			= hAPI.getCardValue(&quot;percentual&quot; + &quot;___&quot; + row);
+						//	var historicoRateioProd	= &quot;1&quot;;
+							
+							//var vlRateioProd = formatMoeda(valorTotalItem);
+						//	var vlRateioProd = hAPI.getCardValue(&quot;valorRatMoeda&quot; + &quot;___&quot; + row);
+							
+							//Construcao da terceira parte do XML INT_TITMMOVRATCCU_IMP						
+							var xml = xml +  &quot;\n\n&quot; +
+							
+											&quot;&lt;INT_TITMMOVRATCCU_IMP&gt;&quot;										+ &quot;\n&quot; +
+												&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +
+												&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +
+												&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +
+												&quot;&lt;DATATRANSACAO_INT&gt;&quot;+dataTransacao+&quot;&lt;/DATATRANSACAO_INT&gt;&quot;	+ &quot;\n&quot; +
+												&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +
+												&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +
+												&quot;&lt;CODCCUSTO&gt;&quot;+codCentroCustoProd+&quot;&lt;/CODCCUSTO&gt;&quot;				+ &quot;\n&quot; +
+												&quot;&lt;NSEQITMMOV&gt;&quot;+nseqitmmov+&quot;&lt;/NSEQITMMOV&gt;&quot;					+ &quot;\n&quot; +
+												&quot;&lt;VALOR&gt;&quot;+vlRateio+&quot;&lt;/VALOR&gt;&quot;							+ &quot;\n&quot; +
+												&quot;&lt;HISTORICO&gt;&quot;+historicoCurtoTmovHis+&quot;&lt;/HISTORICO&gt;&quot;			+ &quot;\n&quot; +
+											&quot;&lt;/INT_TITMMOVRATCCU_IMP&gt;&quot;;
+							//i++;
+					//	}
+					//}
+
+					i++;
+					nseqitmmov = parseInt(nseqitmmov)+1;
+					idprodutoanterior= idPrd;
+				}
+			
+			
+		xml = xml + &quot;\n\n&quot; + &quot;&lt;/NewDataSet&gt;&quot;;
+		log.warn(&quot;Montando XML precomprometimento redução de valor: &quot; + xml);
+		
+		// Parametros de acesso ao Servico.	
+		var serviceName 	= &quot;wsECMhml&quot;;										
+		var servicePackage	= &quot;org.tempuri.WsECM&quot;;		
+	//	var ds_chave_rm 	= DatasetFactory.getDataset(&quot;ds_chave_rm&quot;, null, null, null);
+		//var ds_chave_rm 	= DatasetFactory.getDataset(&quot;rm_ds_chave&quot;, null, null, null);
+		
+		//var chave			= ds_chave_rm.getValue(0, &quot;CHAVE&quot;);
+
+		var servico = ServiceManager.getService(serviceName);
+		var serviceHelper = servico.getBean();
+		var instancia = servico.instantiate(servicePackage);
+		var ws = instancia.getWsECMSoap();
+		var result = ws.insereMovimentoManutencao(codColigada, xml, chave);
+
+		
+		var erroresult	= result.substring(0, 3);
+		//hAPI.setCardValue(&quot;idmov&quot;,erroresult);
+		//hAPI.setCardValue(&quot;codsuperior2&quot;,result);
+
+		
+		if(erroresult == &quot;555&quot; || erroresult != &quot;FLU&quot;){
+			
+			hAPI.setCardValue(&apos;tipomovimento&apos;,&apos;I&apos;);	
+			
+			throw &quot;&lt;br/&gt;&lt;strong&gt;Ocorreu o Seguinte erro: &lt;/strong&gt;&lt;br/&gt;&quot; + result;
+			
+			}
+			
+			 
+	 
+ } catch(error) { 
+	log.error(error);
+	throw error;
+ }
+ 
+ function formatMoeda(valor){
+		
+		var v = valor.toString();	
+		
+		if (v != &quot;&quot;){
+			
+			var aValores = v.split(&apos;.&apos;);
+			if (aValores.length &lt;= 1)
+				v += &apos;00&apos;;
+			else{
+				if (aValores[1].toString().length &lt;= 1)
+					v = aValores[0].toString() + aValores[1].toString() + &apos;0&apos;;
+				else{
+					
+					//Formata valor em 2 casas decimais
+					var valor = parseFloat(v);
+					valor = valor.toFixed(2);
+					v = valor.toString();
+				}
+			}
+		}
+				
+		v=v.replace(/\D/g,&quot;&quot;); // permite digitar apenas numero 
+		v=v.replace(/(\d{1})(\d{14})$/,&quot;$1.$2&quot;); 	// coloca ponto antes dos ultimos digitos 
+		v=v.replace(/(\d{1})(\d{11})$/,&quot;$1.$2&quot;); 	// coloca ponto antes dos ultimos 11 digitos 
+		v=v.replace(/(\d{1})(\d{8})$/,&quot;$1.$2&quot;); 	// coloca ponto antes dos ultimos 8 digitos 
+		v=v.replace(/(\d{1})(\d{5})$/,&quot;$1.$2&quot;); 	// coloca ponto antes dos ultimos 5 digitos 
+		v=v.replace(/(\d{1})(\d{1,2})$/,&quot;$1,$2&quot;); 	// coloca virgula antes dos ultimos 2 digitos 
+			
+		return v;
+	}
+
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeCancelProcess</eventId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeCancelProcess(colleagueId,processId){&#xd;
+try{&#xd;
+	var numSolicitacao			= getValue(&quot;WKNumProces&quot;);&#xd;
+	&#xd;
+	var atividade = getValue(&quot;WKNumState&quot;);&#xd;
+&#xd;
+		 	var status		 			= &quot;A&quot;;&#xd;
+			var operacao				= &quot;C&quot;;&#xd;
+&#xd;
+	&#xd;
+	/*VARIAVEIS INT_TMOV_IMP*/&#xd;
+&#xd;
+		    var ds_chave_rm 	= DatasetFactory.getDataset(&quot;ds_chave_rm&quot;, null, null, null);&#xd;
+			var chave			= ds_chave_rm.getValue(0, &quot;CHAVE&quot;);&#xd;
+			var codColigada				=ds_chave_rm.getValue(0, &quot;CODCOLIGADA&quot;);&#xd;
+&#xd;
+			&#xd;
+	var dataInsercao			= hAPI.getCardValue(&quot;DataCriacao&quot;);&#xd;
+	var chaveOrigem				= &quot;FLUIG-&quot; + numSolicitacao;&#xd;
+	var dataTransacao			= dataInsercao;&#xd;
+	//var codColigada				= &quot;1&quot;;&#xd;
+	var codFilial				= &quot;1&quot;;&#xd;
+	var codLoc					= &quot;01&quot;;&#xd;
+	var codCfo					= hAPI.getCardValue(&quot;idFornecedor&quot;);&#xd;
+	var serie           		= &quot;CTR&quot;;&#xd;
+	var codTMV					= hAPI.getCardValue(&quot;TipoComprometimento&quot;); &#xd;
+	var movImpresso   			= &quot;1&quot;;&#xd;
+	var docImpresso   			= &quot;0&quot;;&#xd;
+	var fatImpressa   			= &quot;0&quot;;&#xd;
+	var dataEmissao				= hAPI.getCardValue(&quot;DataComprometimento&quot;);&#xd;
+	var dataSaida				= hAPI.getCardValue(&quot;DataComprometimento&quot;);&#xd;
+	var codMoedaVl    			= &quot;R$&quot;;&#xd;
+	var codColCfo				= codColigada;&#xd;
+	var geradoPorLote			= &quot;0&quot;;&#xd;
+	var gerouConta				= &quot;0&quot;;&#xd;
+	var geradoPorContaTrabalho	= &quot;0&quot;;&#xd;
+	var gerouContaTrabalho		= &quot;0&quot;;&#xd;
+	var codCpg					= &quot;01&quot;;&#xd;
+	var campoLivre1  			= chaveOrigem;&#xd;
+	var campoLivre2  			= hAPI.getCardValue(&quot;tituloComprometimento&quot;);&#xd;
+	var codVend1      			= hAPI.getCardValue(&quot;codVen&quot;);&#xd;
+	var idcontrato      			= hAPI.getCardValue(&quot;idcontrato&quot;);&#xd;
+	var idseqcnt	= 0;&#xd;
+	var dsccontrato = &quot;&quot;;&#xd;
+	if(codTMV==&quot;1.1.87&quot;){&#xd;
+		dsccontrato= &quot;&lt;IDCNT&gt;&quot;+idcontrato+&quot;&lt;/IDCNT&gt;&quot;;		&#xd;
+		idseqcnt = hAPI.getCardValue(&quot;idcontratocodcfo&quot;);&#xd;
+		};&#xd;
+&#xd;
+		&#xd;
+	/*VARIAVEIS INT_TMOVCOMPL_IMP*/          &#xd;
+	var origemPagamento	= &quot;&quot;; //010 =&gt; credenciamento&#xd;
+&#xd;
+	/*VARIAVEIS INT_TMOVHISTORICO_IMP*/&#xd;
+	var historicoCurtoTmovHis	= chaveOrigem + &quot;: &quot; + hAPI.getCardValue(&quot;justificativa&quot;);&#xd;
+	var historicoLongoTmovHis	= &quot;1&quot;;&#xd;
+&#xd;
+	//Construcao da primeira parte do xml INT_TMOV_IMP, INT_TMOVCOMPL_IMP, INT_TMOVHISTORICO_IMP&#xd;
+	var xml	=  &quot;\n&quot; +&#xd;
+	&#xd;
+				&quot;&lt;NewDataSet&gt;&quot;																		+ &quot;\n&quot; +&#xd;
+					&quot;&lt;INT_TMOV_IMP&gt;&quot;																+ &quot;\n&quot; +&#xd;
+					&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;											+ &quot;\n&quot; +&#xd;
+					&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;										+ &quot;\n&quot; +&#xd;
+					&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;							+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;							+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;									+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODFILIAL&gt;&quot;+codFilial+&quot;&lt;/CODFILIAL&gt;&quot;											+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODLOC&gt;&quot;+codLoc+&quot;&lt;/CODLOC&gt;&quot;													+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODCFO&gt;&quot;+codCfo+&quot;&lt;/CODCFO&gt;&quot;													+ &quot;\n&quot; +&#xd;
+					&quot;&lt;SERIE&gt;&quot;+serie+&quot;&lt;/SERIE&gt;&quot;														+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODTMV&gt;&quot;+codTMV+&quot;&lt;/CODTMV&gt;&quot;													+ &quot;\n&quot; +&#xd;
+					&quot;&lt;MOVIMPRESSO&gt;&quot;+movImpresso+&quot;&lt;/MOVIMPRESSO&gt;&quot;									+ &quot;\n&quot; +&#xd;
+					&quot;&lt;DOCIMPRESSO&gt;&quot;+docImpresso+&quot;&lt;/DOCIMPRESSO&gt;&quot;									+ &quot;\n&quot; +&#xd;
+					&quot;&lt;FATIMPRESSA&gt;&quot;+fatImpressa+&quot;&lt;/FATIMPRESSA&gt;&quot;									+ &quot;\n&quot; +&#xd;
+					&quot;&lt;DATAEMISSAO&gt;&quot;+dataEmissao+&quot;&lt;/DATAEMISSAO&gt;&quot;									+ &quot;\n&quot; +&#xd;
+					&quot;&lt;DATASAIDA&gt;&quot;+dataSaida+&quot;&lt;/DATASAIDA&gt;&quot;											+ &quot;\n&quot; +&#xd;
+					&quot;&lt;DATAENTREGA&gt;&quot;+dataSaida+&quot;&lt;/DATAENTREGA&gt;&quot;											+ &quot;\n&quot; +&#xd;
+					&quot;&lt;PRAZOENTREGA&gt;0&lt;/PRAZOENTREGA&gt;&quot;											+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODMOEVALORLIQUIDO&gt;&quot;+codMoedaVl+&quot;&lt;/CODMOEVALORLIQUIDO&gt;&quot;						+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODCOLCFO&gt;&quot;+codColCfo+&quot;&lt;/CODCOLCFO&gt;&quot;											+ &quot;\n&quot; +&#xd;
+					&quot;&lt;GERADOPORLOTE&gt;&quot;+geradoPorLote+&quot;&lt;/GERADOPORLOTE&gt;&quot;								+ &quot;\n&quot; +&#xd;
+					//&quot;&lt;CODDEPARTAMENTO&gt;&quot;+codDepartamento+&quot;&lt;/CODDEPARTAMENTO&gt;&quot;						+ &quot;\n&quot; +&#xd;
+					&quot;&lt;GEROUCONTATRABALHO&gt;&quot;+gerouConta+&quot;&lt;/GEROUCONTATRABALHO&gt;&quot;						+ &quot;\n&quot; +&#xd;
+					&quot;&lt;GERADOPORCONTATRABALHO&gt;&quot;+geradoPorContaTrabalho+&quot;&lt;/GERADOPORCONTATRABALHO&gt;&quot;	+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODCPG&gt;&quot;+codCpg+&quot;&lt;/CODCPG&gt;&quot;													+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CAMPOLIVRE1&gt;&quot;+campoLivre1+&quot;&lt;/CAMPOLIVRE1&gt;&quot;									+ &quot;\n&quot; +&#xd;
+					// &quot;&lt;CAMPOLIVRE2&gt;&quot;+campoLivre2+&quot;&lt;/CAMPOLIVRE2&gt;&quot;									+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODVEN1&gt;&quot;+codVend1+&quot;&lt;/CODVEN1&gt;&quot;												+ &quot;\n&quot; +&#xd;
+				&quot;&lt;/INT_TMOV_IMP&gt;&quot;																	+ &quot;\n\n&quot; +&#xd;
+	&#xd;
+				&quot;&lt;INT_TMOVCOMPL_IMP&gt;&quot;																+ &quot;\n&quot; +&#xd;
+					&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;											+ &quot;\n&quot; +&#xd;
+					&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;										+ &quot;\n&quot; +&#xd;
+					&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;							+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;							+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;									+ &quot;\n&quot; +&#xd;
+					&quot;&lt;ORIGEMPAG&gt;&quot;+origemPagamento+&quot;&lt;/ORIGEMPAG&gt;&quot;									+ &quot;\n&quot; +&#xd;
+				&quot;&lt;/INT_TMOVCOMPL_IMP&gt;&quot;																+ &quot;\n\n&quot; +&#xd;
+&#xd;
+				&quot;&lt;INT_TMOVHISTORICO_IMP&gt;&quot;															+ &quot;\n&quot; +&#xd;
+					&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;											+ &quot;\n&quot; +&#xd;
+					&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;										+ &quot;\n&quot; +&#xd;
+					&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;							+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;							+ &quot;\n&quot; +&#xd;
+					&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;									+ &quot;\n&quot; +&#xd;
+					&quot;&lt;HISTORICOCURTO&gt;&quot;+historicoCurtoTmovHis+&quot;&lt;/HISTORICOCURTO&gt;&quot;					+ &quot;\n&quot; +&#xd;
+					&quot;&lt;HISTORICOLONGO&gt;&quot;+historicoLongoTmovHis+&quot;&lt;/HISTORICOLONGO&gt;&quot;					+ &quot;\n&quot; +&#xd;
+				&quot;&lt;/INT_TMOVHISTORICO_IMP&gt;&quot;;&#xd;
+	&#xd;
+&#xd;
+	//RATEIO GLOBAL&#xd;
+	var i 			= 0;&#xd;
+    var process 	= getValue(&quot;WKNumProces&quot;);&#xd;
+    var cardData	= new java.util.HashMap();&#xd;
+	cardData 		= hAPI.getCardData(process);&#xd;
+	var keys 		= cardData.keySet().toArray();&#xd;
+	&#xd;
+	for ( var key in keys) {&#xd;
+		var field = keys[key];&#xd;
+		if (field.indexOf(&quot;centroCusto_zoom___&quot;) &gt; -1) {&#xd;
+	&#xd;
+			var row 			= field.replace(&quot;centroCusto_zoom___&quot;, &quot;&quot;);&#xd;
+			&#xd;
+			/*VARIAVEIS INT_TMOVRATCCU_IMP*/                      &#xd;
+			var codCentroCusto	= hAPI.getCardValue(&quot;codCusto&quot; + &quot;___&quot; + row);&#xd;
+			var valorRateio		= hAPI.getCardValue(&quot;valorRatMoeda&quot; + &quot;___&quot; + row);&#xd;
+			var vlRateio		= valorRateio;&#xd;
+			var historicoTmov	= &quot;1&quot;;&#xd;
+&#xd;
+			//Construcao da segunda parte do XML INT_TMOVRATCCU_IMP					&#xd;
+			var xml = xml + &quot;\n\n&quot; +&#xd;
+			&#xd;
+							&quot;&lt;INT_TMOVRATCCU_IMP&gt;&quot;											+ &quot;\n&quot; +&#xd;
+								&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +&#xd;
+								&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +&#xd;
+								&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +&#xd;
+								&quot;&lt;DATATRANSACAO_INT&gt;&quot;+dataTransacao+&quot;&lt;/DATATRANSACAO_INT&gt;&quot;	+ &quot;\n&quot; +&#xd;
+								&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +&#xd;
+								&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +&#xd;
+								&quot;&lt;CODCCUSTO&gt;&quot;+codCentroCusto+&quot;&lt;/CODCCUSTO&gt;&quot;					+ &quot;\n&quot; +&#xd;
+								&quot;&lt;VALOR&gt;&quot;+vlRateio+&quot;&lt;/VALOR&gt;&quot;								+ &quot;\n&quot; +&#xd;
+								&quot;&lt;HISTORICO&gt;&quot;+historicoTmov+&quot;&lt;/HISTORICO&gt;&quot;					+ &quot;\n&quot; +&#xd;
+							&quot;&lt;/INT_TMOVRATCCU_IMP&gt;&quot;;&#xd;
+			i++;&#xd;
+		}&#xd;
+	}&#xd;
+	&#xd;
+	/*Itens do Pedido*/		&#xd;
+    var i 			= 0;&#xd;
+    var process 	= getValue(&quot;WKNumProces&quot;);&#xd;
+    var cardData	= new java.util.HashMap();&#xd;
+	cardData 		= hAPI.getCardData(process);&#xd;
+	var keys 		= cardData.keySet().toArray();&#xd;
+	var nseqitmmov		= 1;&#xd;
+	var idprodutoanterior=0;&#xd;
+&#xd;
+	for ( var key in keys) {&#xd;
+		var field = keys[key];&#xd;
+		if (field.indexOf(&quot;servico___&quot;) &gt; -1) {&#xd;
+	&#xd;
+			var row = field.replace(&quot;servico___&quot;, &quot;&quot;);&#xd;
+&#xd;
+			/*VARIAVEIS INT_TITMMOV_IMP*/                &#xd;
+			var idPrd					= hAPI.getCardValue(&quot;idproduto&quot; 		+ &quot;___&quot; + row);&#xd;
+			var codtb1fat				= hAPI.getCardValue(&quot;codtb1fat&quot; 	+ &quot;___&quot; + row);&#xd;
+			var codDepartamento			= hAPI.getCardValue(&quot;coddepartamento&quot;+ &quot;___&quot; + row);&#xd;
+			var quantidade				= 1;&#xd;
+			var precoUnitario			= hAPI.getCardValue(&quot;valorRatMoeda&quot; + &quot;___&quot; + row);&#xd;
+			var valorTotalItem			= precoUnitario;&#xd;
+			//vlTotalItemMoeda			= formatMoeda(valorTotalItem);&#xd;
+			var Nnseqitmcnt				= nseqitmmov;&#xd;
+			var dataEmissao				= dataInsercao;&#xd;
+			var codFilial				= &quot;1&quot;;&#xd;
+			var historicoCurtoTitmov	= &quot;1&quot;;&#xd;
+			var codcoltborcam			= &quot;1&quot;;&#xd;
+			var codtborcamento			= &quot;001&quot;;&#xd;
+			var codTb2Fat				= hAPI.getCardValue(&quot;origemrecurso&quot;);&#xd;
+			//if(idprodutoanterior != idPrd){&#xd;
+			&#xd;
+		//	vlTotalItemMoeda&#xd;
+//			var codDepartamento			= &quot;01&quot;;&#xd;
+			//var codDepartamento			= &quot;1000&quot;;&#xd;
+			&#xd;
+			//Construcao da terceira parte do XML INT_TITMMOV_IMP, INT_TITMMOVHISTORICO_IMP					&#xd;
+			xml = xml+  &quot;\n\n&quot; +&#xd;
+			&#xd;
+						&quot;&lt;INT_TITMMOV_IMP&gt;&quot;+ &quot;\n&quot; +&#xd;
+							&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +&#xd;
+							&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +&#xd;
+							&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +&#xd;
+							&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +&#xd;
+							&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +&#xd;
+							&quot;&lt;NSEQITMCNT&gt;&quot;+idseqcnt+&quot;&lt;/NSEQITMCNT&gt;&quot;					+ &quot;\n&quot; +&#xd;
+							&quot;&lt;CODTB1FAT&gt;&quot;+codtb1fat+&quot;&lt;/CODTB1FAT&gt;&quot;						+ &quot;\n&quot; +&#xd;
+							&quot;&lt;IDPRD&gt;&quot;+idPrd+&quot;&lt;/IDPRD&gt;&quot;									+ &quot;\n&quot; +&#xd;
+							&quot;&lt;QUANTIDADE&gt;&quot;+quantidade+&quot;&lt;/QUANTIDADE&gt;&quot;					+ &quot;\n&quot; +&#xd;
+							&quot;&lt;PRECOUNITARIO&gt;&quot;+precoUnitario+&quot;&lt;/PRECOUNITARIO&gt;&quot;			+ &quot;\n&quot; +&#xd;
+							&quot;&lt;CODCOLTBORCAMENTO&gt;&quot;+codcoltborcam+&quot;&lt;/CODCOLTBORCAMENTO&gt;&quot;	+ &quot;\n&quot; +&#xd;
+							&quot;&lt;CODTBORCAMENTO&gt;&quot;+codtborcamento+&quot;&lt;/CODTBORCAMENTO&gt;&quot;		+ &quot;\n&quot; +&#xd;
+							&quot;&lt;DATAEMISSAO&gt;&quot;+dataEmissao+&quot;&lt;/DATAEMISSAO&gt;&quot;				+ &quot;\n&quot; +&#xd;
+							&quot;&lt;QUANTIDADEARECEBER&gt;&quot;+quantidade+&quot;&lt;/QUANTIDADEARECEBER&gt;&quot;	+ &quot;\n&quot; +&#xd;
+							&quot;&lt;VALORTOTALITEM&gt;&quot;+precoUnitario+&quot;&lt;/VALORTOTALITEM&gt;&quot;		+ &quot;\n&quot; +&#xd;
+							&quot;&lt;CODFILIAL&gt;&quot;+codFilial+&quot;&lt;/CODFILIAL&gt;&quot;						+ &quot;\n&quot; +&#xd;
+							&quot;&lt;NSEQITMMOV&gt;&quot;+nseqitmmov+&quot;&lt;/NSEQITMMOV&gt;&quot;					+ &quot;\n&quot; +&#xd;
+							&quot;&lt;CODTB2FAT&gt;&quot;+codTb2Fat+&quot;&lt;/CODTB2FAT&gt;&quot;						+ &quot;\n&quot; +&#xd;
+							&quot;&lt;CODDEPARTAMENTO&gt;&quot;+codDepartamento+&quot;&lt;/CODDEPARTAMENTO&gt;&quot;	+ &quot;\n&quot; +&#xd;
+							dsccontrato+ &quot;\n&quot; +			&#xd;
+						&quot;&lt;/INT_TITMMOV_IMP&gt;&quot;											+ &quot;\n\n&quot; +&#xd;
+&#xd;
+						&quot;&lt;INT_TITMMOVHISTORICO_IMP&gt;&quot;									+ &quot;\n&quot; +&#xd;
+							&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +&#xd;
+							&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +&#xd;
+							&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +&#xd;
+							&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +&#xd;
+							&quot;&lt;NSEQITMMOV&gt;&quot;+nseqitmmov+&quot;&lt;/NSEQITMMOV&gt;&quot;					+ &quot;\n&quot; +&#xd;
+							&quot;&lt;HISTORICOCURTO&gt;&quot;+historicoCurtoTitmov+&quot;&lt;/HISTORICOCURTO&gt;&quot;	+ &quot;\n&quot; +&#xd;
+							&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +&#xd;
+						&quot;&lt;/INT_TITMMOVHISTORICO_IMP&gt;&quot;;&#xd;
+			//}&#xd;
+			/*Rateio por itens do pedido*/     		&#xd;
+		    //var i 			= 0;&#xd;
+		    //var process 	= getValue(&quot;WKNumProces&quot;);&#xd;
+		    //var cardData	= new java.util.HashMap();&#xd;
+			//cardData 		= hAPI.getCardData(process);&#xd;
+			//var keys 		= cardData.keySet().toArray();&#xd;
+			&#xd;
+			//for ( var key in keys) {&#xd;
+				//var field = keys[key];&#xd;
+	//			if (field.indexOf(&quot;centroCusto_zoom___&quot;) &gt; -1) {&#xd;
+				&#xd;
+					//var row	= field.replace(&quot;centroCusto_zoom___&quot;, &quot;&quot;);&#xd;
+					&#xd;
+					/*VARIAVEIS INT_TMOVRATCCU_IMP*/                      &#xd;
+					var codCentroCustoProd	= hAPI.getCardValue(&quot;codCusto&quot; + &quot;___&quot; + row);&#xd;
+					//var percentual			= hAPI.getCardValue(&quot;percentual&quot; + &quot;___&quot; + row);&#xd;
+					var historicoRateioProd	= &quot;1&quot;;&#xd;
+					&#xd;
+					//var vlRateioProd = formatMoeda(valorTotalItem);&#xd;
+					var vlRateioProd = hAPI.getCardValue(&quot;valorRatMoeda&quot; + &quot;___&quot; + row);&#xd;
+					&#xd;
+					//Construcao da terceira parte do XML INT_TITMMOVRATCCU_IMP						&#xd;
+					var xml = xml +  &quot;\n\n&quot; +&#xd;
+					&#xd;
+									&quot;&lt;INT_TITMMOVRATCCU_IMP&gt;&quot;										+ &quot;\n&quot; +&#xd;
+										&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +&#xd;
+										&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +&#xd;
+										&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +&#xd;
+										&quot;&lt;DATATRANSACAO_INT&gt;&quot;+dataTransacao+&quot;&lt;/DATATRANSACAO_INT&gt;&quot;	+ &quot;\n&quot; +&#xd;
+										&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +&#xd;
+										&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +&#xd;
+										&quot;&lt;CODCCUSTO&gt;&quot;+codCentroCustoProd+&quot;&lt;/CODCCUSTO&gt;&quot;				+ &quot;\n&quot; +&#xd;
+										&quot;&lt;NSEQITMMOV&gt;&quot;+nseqitmmov+&quot;&lt;/NSEQITMMOV&gt;&quot;					+ &quot;\n&quot; +&#xd;
+										&quot;&lt;VALOR&gt;&quot;+vlRateioProd+&quot;&lt;/VALOR&gt;&quot;							+ &quot;\n&quot; +&#xd;
+										&quot;&lt;HISTORICO&gt;&quot;+historicoRateioProd+&quot;&lt;/HISTORICO&gt;&quot;			+ &quot;\n&quot; +&#xd;
+									&quot;&lt;/INT_TITMMOVRATCCU_IMP&gt;&quot;;&#xd;
+					//i++;&#xd;
+			//	}&#xd;
+			//}&#xd;
+&#xd;
+			i++;&#xd;
+			nseqitmmov = parseInt(nseqitmmov)+1;&#xd;
+			idprodutoanterior= idPrd;&#xd;
+		}&#xd;
+	}&#xd;
+	&#xd;
+xml = xml + &quot;\n\n&quot; + &quot;&lt;/NewDataSet&gt;&quot;;&#xd;
+log.warn(&quot;Montando XML precomprometimento: &quot; + xml);&#xd;
+&#xd;
+// Parametros de acesso ao Servico.	&#xd;
+var serviceName 	= &quot;wsECM&quot;;										&#xd;
+var servicePackage	= &quot;org.tempuri.WsECM&quot;;		&#xd;
+//var ds_chave_rm 	= DatasetFactory.getDataset(&quot;ds_chave_rm&quot;, null, null, null);&#xd;
+//var ds_chave_rm 	= DatasetFactory.getDataset(&quot;rm_ds_chave&quot;, null, null, null);&#xd;
+&#xd;
+//var chave			= ds_chave_rm.getValue(0, &quot;CHAVE&quot;);&#xd;
+&#xd;
+var servico = ServiceManager.getService(serviceName);&#xd;
+var serviceHelper = servico.getBean();&#xd;
+var instancia = servico.instantiate(servicePackage);&#xd;
+var ws = instancia.getWsECMSoap();&#xd;
+var result = ws.insereMovimentoManutencao(codColigada, xml, chave);&#xd;
+var erroresult	= result.substring(0, 3);&#xd;
+//hAPI.setCardValue(&quot;idmov&quot;,erroresult);&#xd;
+//hAPI.setCardValue(&quot;codsuperior2&quot;,result);&#xd;
+} catch(error) { &#xd;
+	log.error(error);&#xd;
+	throw error;&#xd;
+ }&#xd;
+	&#xd;
+&#xd;
+&#xd;
+&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterTaskSave</eventId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterTaskSave(colleagueId,nextSequenceId,userList){&#xd;
+	var numSolicitacao	= getValue(&quot;WKNumProces&quot;);&#xd;
+	var contrato= hAPI.getCardValue(&quot;lbcontrato&quot;);&#xd;
+	var credenciado = hAPI.getCardValue(&quot;lbFornecedor&quot;);&#xd;
+	var justificativa = hAPI.getCardValue(&quot;justificativa&quot;);&#xd;
+	var unidade = hAPI.getCardValue(&quot;Unidade&quot;);&#xd;
+	var solicitante = hAPI.getCardValue(&quot;Solicitante&quot;);&#xd;
+&#xd;
+	&#xd;
+	&#xd;
+	&#xd;
+	if(hAPI.getCardValue(&quot;DataCriacao&quot;) == null || hAPI.getCardValue(&quot;DataCriacao&quot;) == undefined || hAPI.getCardValue(&quot;DataCriacao&quot;) == &apos;&apos;){&#xd;
+		var datetime = new Date();&#xd;
+		// format the output&#xd;
+		var month = datetime.getMonth()+1;&#xd;
+		if (month.toString().length ==1){&#xd;
+			month=&apos;0&apos;+month;&#xd;
+		}&#xd;
+		&#xd;
+		var day = datetime.getDate();&#xd;
+		if (day.toString().length ==1){&#xd;
+			day=&apos;0&apos;+day;&#xd;
+			&#xd;
+		}&#xd;
+		&#xd;
+		var year = datetime.getFullYear();&#xd;
+		hAPI.setCardValue(&apos;DataCriacao&apos;,day+&apos;/&apos;+month+&apos;/&apos;+year);&#xd;
+		hAPI.setCardValue(&apos;data1&apos;,year+month+day);&#xd;
+		}&#xd;
+	hAPI.setCardValue(&apos;codigoFluig&apos;,numSolicitacao);&#xd;
+	&#xd;
+	// ETAPA CRIAÇÃO PROCESSO&#xd;
+	if(atividade == 0 || atividade == 4 || atividade == undefined ){&#xd;
+		// titulo= hAPI.getCardValue(&quot;numeroContrato&quot;)+&apos;, resumo: &apos;+hAPI.getCardValue(&quot;justificativa&quot;);	&#xd;
+		comentario= &quot;Foi criado um pagamento para o credenciado &quot;+credenciado+&quot;(Contrato nº &quot;+contrato+&quot;), resumo do pagamento: &quot;+justificativa+&quot;, Solicitante: &quot;+solicitante+&quot;-&quot;+unidade;&#xd;
+		&#xd;
+		}&#xd;
+	&#xd;
+	if(atividade == 46){&#xd;
+		var conformecontroladoria = hAPI.getCardValue(&quot;conformecontroladoria&quot;);&#xd;
+		var parecercontroladoria = hAPI.getCardValue(&quot;parecercontroladoria&quot;);&#xd;
+		var Tcontroladoria = hAPI.getCardValue(&quot;Tcontroladoria&quot;);&#xd;
+		if(conformecontroladoria == &quot;S&quot;){&#xd;
+			comentario= &quot;O pagamento: &quot;+justificativa+&quot; foi validado por &quot;+Tcontroladoria;	&#xd;
+		}else{&#xd;
+			comentario= &quot;O &quot;+Tcontroladoria+&quot; solicitou ajuste &quot;+parecercontroladoria;&#xd;
+		}&#xd;
+	}&#xd;
+		if(atividade == 49){&#xd;
+			var pagamentosFINANCEIRO = hAPI.getCardValue(&quot;pagamentosFINANCEIRO&quot;);&#xd;
+			var parecerTpagamentosFINANCEIRO = hAPI.getCardValue(&quot;parecerTpagamentosFINANCEIRO&quot;);&#xd;
+			var TpagamentosFINANCEIRO = hAPI.getCardValue(&quot;TpagamentosFINANCEIRO&quot;);&#xd;
+			&#xd;
+			if(pagamentosFINANCEIRO == &quot;S&quot;){&#xd;
+				comentario= &quot;O pagamento: &quot;+justificativa+&quot; foi recebido por &quot;+TpagamentosFINANCEIRO;	&#xd;
+			}else{&#xd;
+				comentario= &quot;O &quot;+TpagamentosFINANCEIRO+&quot; solicitou ajuste &quot;+parecerTpagamentosFINANCEIRO;&#xd;
+			}&#xd;
+		&#xd;
+			&#xd;
+		// titulo= hAPI.getCardValue(&quot;numeroContrato&quot;)+&apos;, resumo: &apos;+hAPI.getCardValue(&quot;justificativa&quot;);	&#xd;
+		&#xd;
+		&#xd;
+		}&#xd;
+			&#xd;
+		&#xd;
+	if(comentario!=&quot;&quot;){&#xd;
+		hAPI.setCardValue(&quot;titulo&quot;,comentario);&#xd;
+		hAPI.setTaskComments(usuario, numSolicitacao, 0, comentario);&#xd;
+	}&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>ENG_LITERALS</eventId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>process.description=PagamentoContratoRM
+process.category=
+process.instructions=
+process.version.instructions=
+1.name=Pré Comprometimento
+2.name=Demandante
+3.name=Integração/Suporte
+4.name=Financeiro
+4.instructions=
+5.name=Integração RM (Inclui/Altera/Cancela) parcela
+8.name=Suporte TIC
+8.instructions=
+10.name=
+10.flow=
+10.return=
+11.name=Alteração
+11.instructions=
+15.name=Cancelado
+15.instructions=Atividade final do processo
+19.name=
+19.flow=
+19.return=
+20.name=
+20.flow=
+20.return=
+26.name=Pagamento de contrato
+26.instructions=
+29.name=
+29.flow=
+29.return=
+31.name=Pago
+31.instructions=Atividade final do processo
+33.name=
+33.flow=
+33.return=
+35.name=Reduz Comprometimento
+37.name=
+37.flow=
+37.return=
+39.name=
+39.flow=
+39.return=
+40.name=
+40.flow=
+40.return=
+41.name=
+41.flow=
+41.return=
+43.name=Controladoria
+44.name=Homologa Pagamento
+44.instructions=
+45.name=
+45.flow=
+45.return=
+46.name=Homologado
+47.name=
+47.flow=
+47.return=
+48.name=
+48.flow=
+48.return=
+49.name=Exclusivo
+50.name=
+50.flow=
+50.return=
+51.name=
+51.flow=
+51.return=
+52.name=
+52.flow=
+52.return=
+53.name=
+53.flow=
+53.return=</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>ESP_LITERALS</eventId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>process.description=PagamentoContratoRM
+process.category=
+process.instructions=
+process.version.instructions=
+1.name=Pré Comprometimento
+2.name=Demandante
+3.name=Integração/Suporte
+4.name=Financeiro
+4.instructions=
+5.name=Integração RM (Inclui/Altera/Cancela) parcela
+8.name=Suporte TIC
+8.instructions=
+10.name=
+10.flow=
+10.return=
+11.name=Alteração
+11.instructions=
+15.name=Cancelado
+15.instructions=Atividade final do processo
+19.name=
+19.flow=
+19.return=
+20.name=
+20.flow=
+20.return=
+26.name=Pagamento de contrato
+26.instructions=
+29.name=
+29.flow=
+29.return=
+31.name=Pago
+31.instructions=Atividade final do processo
+33.name=
+33.flow=
+33.return=
+35.name=Reduz Comprometimento
+37.name=
+37.flow=
+37.return=
+39.name=
+39.flow=
+39.return=
+40.name=
+40.flow=
+40.return=
+41.name=
+41.flow=
+41.return=
+43.name=Controladoria
+44.name=Homologa Pagamento
+44.instructions=
+45.name=
+45.flow=
+45.return=
+46.name=Homologado
+47.name=
+47.flow=
+47.return=
+48.name=
+48.flow=
+48.return=
+49.name=Exclusivo
+50.name=
+50.flow=
+50.return=
+51.name=
+51.flow=
+51.return=
+52.name=
+52.flow=
+52.return=
+53.name=
+53.flow=
+53.return=</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>POR_LITERALS</eventId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>process.description=PagamentoContratoRM
+process.category=
+process.instructions=
+process.version.instructions=
+1.name=Pré Comprometimento
+2.name=Demandante
+3.name=Integração/Suporte
+4.name=Financeiro
+4.instructions=
+5.name=Integração RM (Inclui/Altera/Cancela) parcela
+8.name=Suporte TIC
+8.instructions=
+10.name=
+10.flow=
+10.return=
+11.name=Alteração
+11.instructions=
+15.name=Cancelado
+15.instructions=Atividade final do processo
+19.name=
+19.flow=
+19.return=
+20.name=
+20.flow=
+20.return=
+26.name=Pagamento de contrato
+26.instructions=
+29.name=
+29.flow=
+29.return=
+31.name=Pago
+31.instructions=Atividade final do processo
+33.name=
+33.flow=
+33.return=
+35.name=Reduz Comprometimento
+37.name=
+37.flow=
+37.return=
+39.name=
+39.flow=
+39.return=
+40.name=
+40.flow=
+40.return=
+41.name=
+41.flow=
+41.return=
+43.name=Controladoria
+44.name=Homologa Pagamento
+44.instructions=
+45.name=
+45.flow=
+45.return=
+46.name=Homologado
+47.name=
+47.flow=
+47.return=
+48.name=
+48.flow=
+48.return=
+49.name=Exclusivo
+50.name=
+50.flow=
+50.return=
+51.name=
+51.flow=
+51.return=
+52.name=
+52.flow=
+52.return=
+53.name=
+53.flow=
+53.return=</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>servicetask5</eventId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function servicetask5(attempt, message) {
+ try {
+		 var numSolicitacao			= getValue(&quot;WKNumProces&quot;);
+		 var tipomovimento 			=  hAPI.getCardValue(&quot;tipomovimento&quot;);
+		 
+			var atividade = getValue(&quot;WKNumState&quot;);
+		
+		    var ds_chave_rm 	= DatasetFactory.getDataset(&quot;ds_chave_rm&quot;, null, null, null);
+			var chave			= ds_chave_rm.getValue(0, &quot;CHAVE&quot;);
+			var codColigada				=ds_chave_rm.getValue(0, &quot;CODCOLIGADA&quot;);
+
+		 // alteração
+		 if(tipomovimento==&quot;A&quot;){
+				 	var status		 			= &quot;A&quot;;
+					var operacao				= &quot;A&quot;;
+			 }
+		 if(tipomovimento==&quot;C&quot;){
+				 	var status		 			= &quot;A&quot;;
+					var operacao				= &quot;C&quot;;
+			 }
+		 if(tipomovimento==&quot;I&quot;){
+				 // inclusão
+				 var status		 			= &quot;I&quot;;
+				 var operacao				= &quot;I&quot;;
+			 }
+		 
+
+
+			
+			/*VARIAVEIS INT_TMOV_IMP*/
+
+			
+			
+			var dataInsercao			= data();
+			var chaveOrigem				= &quot;FLUIG-&quot; + numSolicitacao;
+			var dataTransacao			= dataInsercao;
+			//var codColigada				= hAPI.getCardValue(&quot;codcoligada&quot;);
+			var codFilial				= &quot;1&quot;;
+			var codLoc					= &quot;01&quot;;
+			var codCfo					= hAPI.getCardValue(&quot;idFornecedor&quot;);
+			var serie           		= hAPI.getCardValue(&quot;serie&quot;);
+			var codTMV					= hAPI.getCardValue(&quot;TipoComprometimento&quot;); 
+			var movImpresso   			= &quot;1&quot;;
+			var docImpresso   			= &quot;0&quot;;
+			var fatImpressa   			= &quot;0&quot;;
+			var dataEmissao				= hAPI.getCardValue(&quot;DataComprometimento&quot;);
+			var dataSaida				= hAPI.getCardValue(&quot;DataComprometimento&quot;);
+			var codMoedaVl    			= &quot;R$&quot;;
+			var codColCfo				= codColigada;
+			var geradoPorLote			= &quot;0&quot;;
+			var gerouConta				= &quot;0&quot;;
+			var geradoPorContaTrabalho	= &quot;0&quot;;
+			var gerouContaTrabalho		= &quot;0&quot;;
+			var codCpg					= &quot;01&quot;;
+			var campoLivre1  			= chaveOrigem;
+			var campoLivre2  			= hAPI.getCardValue(&quot;tituloComprometimento&quot;);
+			var codVend1      			= hAPI.getCardValue(&quot;codVen&quot;);
+			var idcontrato      			= hAPI.getCardValue(&quot;idcontrato&quot;);
+			var idseqcnt	= 0;
+			var dsccontrato = &quot;&quot;;
+			var dscnf =&quot;&quot;;
+			var codcxa =  hAPI.getCardValue(&quot;codcxa&quot;); 
+			
+				dsccontrato= &quot;&lt;IDCNT&gt;&quot;+idcontrato+&quot;&lt;/IDCNT&gt;&quot;;		
+				
+				//idseqcnt = hAPI.getCardValue(&quot;item&quot;);
+						
+				dscnf=&quot;&lt;NUMEROMOV&gt;&quot;+hAPI.getCardValue(&quot;nf&quot;)+&quot;&lt;/NUMEROMOV&gt;&quot;		
+			/*VARIAVEIS INT_TMOVCOMPL_IMP*/          
+			var origemPagamento	= &quot;&quot;; //010 =&gt; credenciamento
+
+			/*VARIAVEIS INT_TMOVHISTORICO_IMP*/
+			var historicoCurtoTmovHis	= hAPI.getCardValue(&quot;justificativa&quot;);
+			var historicoLongoTmovHis	= hAPI.getCardValue(&quot;justificativa&quot;);
+
+			//Construcao da primeira parte do xml INT_TMOV_IMP, INT_TMOVCOMPL_IMP, INT_TMOVHISTORICO_IMP
+			var xml	=  &quot;\n&quot; +
+			
+						&quot;&lt;NewDataSet&gt;&quot;																		+ &quot;\n&quot; +
+							&quot;&lt;INT_TMOV_IMP&gt;&quot;																+ &quot;\n&quot; +
+							&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;										+ &quot;\n&quot; +
+							&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;CODFILIAL&gt;&quot;+codFilial+&quot;&lt;/CODFILIAL&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;CODLOC&gt;&quot;+codLoc+&quot;&lt;/CODLOC&gt;&quot;													+ &quot;\n&quot; +
+							&quot;&lt;CODCFO&gt;&quot;+codCfo+&quot;&lt;/CODCFO&gt;&quot;													+ &quot;\n&quot; +
+							&quot;&lt;SERIE&gt;&quot;+serie+&quot;&lt;/SERIE&gt;&quot;														+ &quot;\n&quot; +
+							&quot;&lt;CODTMV&gt;&quot;+codTMV+&quot;&lt;/CODTMV&gt;&quot;													+ &quot;\n&quot; +
+							&quot;&lt;MOVIMPRESSO&gt;&quot;+movImpresso+&quot;&lt;/MOVIMPRESSO&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;DOCIMPRESSO&gt;&quot;+docImpresso+&quot;&lt;/DOCIMPRESSO&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;FATIMPRESSA&gt;&quot;+fatImpressa+&quot;&lt;/FATIMPRESSA&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;DATAEMISSAO&gt;&quot;+dataEmissao+&quot;&lt;/DATAEMISSAO&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;DATASAIDA&gt;&quot;+dataSaida+&quot;&lt;/DATASAIDA&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;DATAENTREGA&gt;&quot;+dataSaida+&quot;&lt;/DATAENTREGA&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;PRAZOENTREGA&gt;0&lt;/PRAZOENTREGA&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;CODMOEVALORLIQUIDO&gt;&quot;+codMoedaVl+&quot;&lt;/CODMOEVALORLIQUIDO&gt;&quot;						+ &quot;\n&quot; +
+							&quot;&lt;CODCOLCFO&gt;&quot;+codColCfo+&quot;&lt;/CODCOLCFO&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;GERADOPORLOTE&gt;&quot;+geradoPorLote+&quot;&lt;/GERADOPORLOTE&gt;&quot;								+ &quot;\n&quot; +
+							//&quot;&lt;CODDEPARTAMENTO&gt;&quot;+codDepartamento+&quot;&lt;/CODDEPARTAMENTO&gt;&quot;						+ &quot;\n&quot; +
+							&quot;&lt;GEROUCONTATRABALHO&gt;&quot;+gerouConta+&quot;&lt;/GEROUCONTATRABALHO&gt;&quot;						+ &quot;\n&quot; +
+							&quot;&lt;GERADOPORCONTATRABALHO&gt;&quot;+geradoPorContaTrabalho+&quot;&lt;/GERADOPORCONTATRABALHO&gt;&quot;	+ &quot;\n&quot; +
+							&quot;&lt;CODCPG&gt;&quot;+codCpg+&quot;&lt;/CODCPG&gt;&quot;													+ &quot;\n&quot; +
+							&quot;&lt;CAMPOLIVRE1&gt;&quot;+campoLivre1+&quot;&lt;/CAMPOLIVRE1&gt;&quot;									+ &quot;\n&quot; +
+							// &quot;&lt;CAMPOLIVRE2&gt;&quot;+campoLivre2+&quot;&lt;/CAMPOLIVRE2&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;CODVEN1&gt;&quot;+codVend1+&quot;&lt;/CODVEN1&gt;&quot;												+ &quot;\n&quot; +
+							&quot;&lt;CODCXA&gt;&quot;+codcxa+&quot;&lt;/CODCXA&gt;&quot;												+ &quot;\n&quot; +
+							dscnf + &quot;\n&quot; +	
+						&quot;&lt;/INT_TMOV_IMP&gt;&quot;																	+ &quot;\n\n&quot; +
+			
+						&quot;&lt;INT_TMOVCOMPL_IMP&gt;&quot;																+ &quot;\n&quot; +
+							&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;										+ &quot;\n&quot; +
+							&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;ORIGEMPAG&gt;&quot;+origemPagamento+&quot;&lt;/ORIGEMPAG&gt;&quot;									+ &quot;\n&quot; +
+						&quot;&lt;/INT_TMOVCOMPL_IMP&gt;&quot;																+ &quot;\n\n&quot; +
+
+						&quot;&lt;INT_TMOVHISTORICO_IMP&gt;&quot;															+ &quot;\n&quot; +
+							&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;											+ &quot;\n&quot; +
+							&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;										+ &quot;\n&quot; +
+							&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;							+ &quot;\n&quot; +
+							&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;									+ &quot;\n&quot; +
+							&quot;&lt;HISTORICOCURTO&gt;&quot;+historicoCurtoTmovHis+&quot;&lt;/HISTORICOCURTO&gt;&quot;					+ &quot;\n&quot; +
+							&quot;&lt;HISTORICOLONGO&gt;&quot;+historicoLongoTmovHis+&quot;&lt;/HISTORICOLONGO&gt;&quot;					+ &quot;\n&quot; +
+						&quot;&lt;/INT_TMOVHISTORICO_IMP&gt;&quot;;
+			
+		
+			//RATEIO GLOBAL
+			var i 			= 0;
+		    var process 	= getValue(&quot;WKNumProces&quot;);
+		    var cardData	= new java.util.HashMap();
+			cardData 		= hAPI.getCardData(process);
+			var keys 		= cardData.keySet().toArray();
+			
+			for ( var key in keys) {
+				var field = keys[key];
+				if (field.indexOf(&quot;centroCusto_zoom___&quot;) &gt; -1) {
+			
+					var row 			= field.replace(&quot;centroCusto_zoom___&quot;, &quot;&quot;);
+					
+					/*VARIAVEIS INT_TMOVRATCCU_IMP*/                      
+					var codCentroCusto	= hAPI.getCardValue(&quot;codCusto&quot; + &quot;___&quot; + row);
+					var valorRateio		= hAPI.getCardValue(&quot;valorRatMoeda&quot; + &quot;___&quot; + row);
+					var vlRateio		= valorRateio;
+					var historicoTmov	= &quot;1&quot;;
+
+					//Construcao da segunda parte do XML INT_TMOVRATCCU_IMP					
+					var xml = xml + &quot;\n\n&quot; +
+					
+									&quot;&lt;INT_TMOVRATCCU_IMP&gt;&quot;											+ &quot;\n&quot; +
+										&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +
+										&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +
+										&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +
+										&quot;&lt;DATATRANSACAO_INT&gt;&quot;+dataTransacao+&quot;&lt;/DATATRANSACAO_INT&gt;&quot;	+ &quot;\n&quot; +
+										&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +
+										&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +
+										&quot;&lt;CODCCUSTO&gt;&quot;+codCentroCusto+&quot;&lt;/CODCCUSTO&gt;&quot;					+ &quot;\n&quot; +
+										&quot;&lt;VALOR&gt;&quot;+vlRateio+&quot;&lt;/VALOR&gt;&quot;								+ &quot;\n&quot; +
+										&quot;&lt;HISTORICO&gt;&quot;+historicoTmov+&quot;&lt;/HISTORICO&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;/INT_TMOVRATCCU_IMP&gt;&quot;;
+					i++;
+				}
+			}
+			
+			/*Itens do Pedido*/		
+		    var i 			= 0;
+		    var process 	= getValue(&quot;WKNumProces&quot;);
+		    var cardData	= new java.util.HashMap();
+			cardData 		= hAPI.getCardData(process);
+			var keys 		= cardData.keySet().toArray();
+			var nseqitmmov		= 1;
+			var idprodutoanterior=0;
+
+			for ( var key in keys) {
+				var field = keys[key];
+				if (field.indexOf(&quot;idproduto___&quot;) &gt; -1) {
+			
+					var row = field.replace(&quot;idproduto___&quot;, &quot;&quot;);
+
+					/*VARIAVEIS INT_TITMMOV_IMP*/                
+					var idPrd					= hAPI.getCardValue(&quot;idproduto&quot; 		+ &quot;___&quot; + row);
+					var codtb1fat				= hAPI.getCardValue(&quot;codtb1fat&quot; 	+ &quot;___&quot; + row);
+					var codDepartamento			= hAPI.getCardValue(&quot;coddepartamento&quot;);
+					var quantidade				= 1;
+					var precoUnitario			= hAPI.getCardValue(&quot;valorRatMoeda&quot; + &quot;___&quot; + row);
+					idseqcnt					= hAPI.getCardValue(&quot;item&quot; + &quot;___&quot; + row);
+					var valorTotalItem			= precoUnitario;
+					//vlTotalItemMoeda			= formatMoeda(valorTotalItem);
+					var Nnseqitmcnt				= nseqitmmov;
+					var dataEmissao				= dataInsercao;
+					var codFilial				= &quot;1&quot;;
+					var historicoCurtoTitmov	= &quot;1&quot;;
+					//var codcoltborcam			= &quot;1&quot;;
+					var codtborcamento			= &quot;001&quot;;
+					var codTb2Fat				= hAPI.getCardValue(&quot;origemrecurso&quot;);
+					//if(idprodutoanterior != idPrd){
+					
+				//	vlTotalItemMoeda
+//					var codDepartamento			= &quot;01&quot;;
+					//var codDepartamento			= &quot;1000&quot;;
+					
+					//Construcao da terceira parte do XML INT_TITMMOV_IMP, INT_TITMMOVHISTORICO_IMP					
+					xml = xml+  &quot;\n\n&quot; +
+					
+								&quot;&lt;INT_TITMMOV_IMP&gt;&quot;+ &quot;\n&quot; +
+									&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +
+									&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +
+									&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +
+									&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +
+									&quot;&lt;NSEQITMCNT&gt;&quot;+idseqcnt+&quot;&lt;/NSEQITMCNT&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;CODTB1FAT&gt;&quot;+codtb1fat+&quot;&lt;/CODTB1FAT&gt;&quot;						+ &quot;\n&quot; +
+									&quot;&lt;IDPRD&gt;&quot;+idPrd+&quot;&lt;/IDPRD&gt;&quot;									+ &quot;\n&quot; +
+									&quot;&lt;QUANTIDADE&gt;&quot;+quantidade+&quot;&lt;/QUANTIDADE&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;PRECOUNITARIO&gt;&quot;+precoUnitario+&quot;&lt;/PRECOUNITARIO&gt;&quot;			+ &quot;\n&quot; +
+									&quot;&lt;CODCOLTBORCAMENTO&gt;&quot;+codColigada+&quot;&lt;/CODCOLTBORCAMENTO&gt;&quot;	+ &quot;\n&quot; +
+									&quot;&lt;CODTBORCAMENTO&gt;&quot;+codtborcamento+&quot;&lt;/CODTBORCAMENTO&gt;&quot;		+ &quot;\n&quot; +
+									&quot;&lt;DATAEMISSAO&gt;&quot;+dataEmissao+&quot;&lt;/DATAEMISSAO&gt;&quot;				+ &quot;\n&quot; +
+									&quot;&lt;QUANTIDADEARECEBER&gt;&quot;+quantidade+&quot;&lt;/QUANTIDADEARECEBER&gt;&quot;	+ &quot;\n&quot; +
+									&quot;&lt;VALORTOTALITEM&gt;&quot;+precoUnitario+&quot;&lt;/VALORTOTALITEM&gt;&quot;		+ &quot;\n&quot; +
+									&quot;&lt;CODFILIAL&gt;&quot;+codFilial+&quot;&lt;/CODFILIAL&gt;&quot;						+ &quot;\n&quot; +
+									&quot;&lt;NSEQITMMOV&gt;&quot;+nseqitmmov+&quot;&lt;/NSEQITMMOV&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;CODTB2FAT&gt;&quot;+codTb2Fat+&quot;&lt;/CODTB2FAT&gt;&quot;						+ &quot;\n&quot; +
+									&quot;&lt;CODDEPARTAMENTO&gt;&quot;+codDepartamento+&quot;&lt;/CODDEPARTAMENTO&gt;&quot;	+ &quot;\n&quot; +
+									dsccontrato+ &quot;\n&quot; +			
+								&quot;&lt;/INT_TITMMOV_IMP&gt;&quot;											+ &quot;\n\n&quot; +
+
+								&quot;&lt;INT_TITMMOVHISTORICO_IMP&gt;&quot;									+ &quot;\n&quot; +
+									&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +
+									&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +
+									&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +
+									&quot;&lt;NSEQITMMOV&gt;&quot;+nseqitmmov+&quot;&lt;/NSEQITMMOV&gt;&quot;					+ &quot;\n&quot; +
+									&quot;&lt;HISTORICOCURTO&gt;&quot;+historicoCurtoTitmov+&quot;&lt;/HISTORICOCURTO&gt;&quot;	+ &quot;\n&quot; +
+									&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +
+								&quot;&lt;/INT_TITMMOVHISTORICO_IMP&gt;&quot;;
+					//}
+					/*Rateio por itens do pedido*/     		
+				    //var i 			= 0;
+				    //var process 	= getValue(&quot;WKNumProces&quot;);
+				    //var cardData	= new java.util.HashMap();
+					//cardData 		= hAPI.getCardData(process);
+					//var keys 		= cardData.keySet().toArray();
+					
+					//for ( var key in keys) {
+						//var field = keys[key];
+			//			if (field.indexOf(&quot;centroCusto_zoom___&quot;) &gt; -1) {
+						
+							//var row	= field.replace(&quot;centroCusto_zoom___&quot;, &quot;&quot;);
+							
+							/*VARIAVEIS INT_TMOVRATCCU_IMP*/                      
+							var codCentroCustoProd	= hAPI.getCardValue(&quot;codCusto&quot; + &quot;___&quot; + row);
+							//var percentual			= hAPI.getCardValue(&quot;percentual&quot; + &quot;___&quot; + row);
+							var historicoRateioProd	= &quot;1&quot;;
+							
+							//var vlRateioProd = formatMoeda(valorTotalItem);
+						//	var vlRateioProd = hAPI.getCardValue(&quot;valorRatMoeda&quot; + &quot;___&quot; + row);
+							
+							//Construcao da terceira parte do XML INT_TITMMOVRATCCU_IMP						
+							var xml = xml +  &quot;\n\n&quot; +
+							
+											&quot;&lt;INT_TITMMOVRATCCU_IMP&gt;&quot;										+ &quot;\n&quot; +
+												&quot;&lt;STATUS_INT&gt;&quot;+status+&quot;&lt;/STATUS_INT&gt;&quot;						+ &quot;\n&quot; +
+												&quot;&lt;OPERACAO_INT&gt;&quot;+operacao+&quot;&lt;/OPERACAO_INT&gt;&quot;					+ &quot;\n&quot; +
+												&quot;&lt;DATAINSERCAO_INT&gt;&quot;+dataInsercao+&quot;&lt;/DATAINSERCAO_INT&gt;&quot;		+ &quot;\n&quot; +
+												&quot;&lt;DATATRANSACAO_INT&gt;&quot;+dataTransacao+&quot;&lt;/DATATRANSACAO_INT&gt;&quot;	+ &quot;\n&quot; +
+												&quot;&lt;CHAVEORIGEM_INT&gt;&quot;+chaveOrigem+&quot;&lt;/CHAVEORIGEM_INT&gt;&quot;		+ &quot;\n&quot; +
+												&quot;&lt;CODCOLIGADA&gt;&quot;+codColigada+&quot;&lt;/CODCOLIGADA&gt;&quot;				+ &quot;\n&quot; +
+												&quot;&lt;CODCCUSTO&gt;&quot;+codCentroCustoProd+&quot;&lt;/CODCCUSTO&gt;&quot;				+ &quot;\n&quot; +
+												&quot;&lt;NSEQITMMOV&gt;&quot;+nseqitmmov+&quot;&lt;/NSEQITMMOV&gt;&quot;					+ &quot;\n&quot; +
+												&quot;&lt;VALOR&gt;&quot;+precoUnitario+&quot;&lt;/VALOR&gt;&quot;							+ &quot;\n&quot; +
+												&quot;&lt;HISTORICO&gt;&quot;+historicoRateioProd+&quot;&lt;/HISTORICO&gt;&quot;			+ &quot;\n&quot; +
+											&quot;&lt;/INT_TITMMOVRATCCU_IMP&gt;&quot;;
+							//i++;
+					//	}
+					//}
+
+					i++;
+					nseqitmmov = parseInt(nseqitmmov)+1;
+					idprodutoanterior= idPrd;
+				}
+			}
+			
+		xml = xml + &quot;\n\n&quot; + &quot;&lt;/NewDataSet&gt;&quot;;
+		log.warn(&quot;Montando XML precomprometimento oagamento de parcela: &quot; + xml);
+		
+		// Parametros de acesso ao Servico.	
+		var serviceName 	= &quot;wsECMhml&quot;;										
+		var servicePackage	= &quot;org.tempuri.WsECM&quot;;		
+	//	var ds_chave_rm 	= DatasetFactory.getDataset(&quot;ds_chave_rm&quot;, null, null, null);
+		//var ds_chave_rm 	= DatasetFactory.getDataset(&quot;rm_ds_chave&quot;, null, null, null);
+		
+		//var chave			= ds_chave_rm.getValue(0, &quot;CHAVE&quot;);
+
+		var servico = ServiceManager.getService(serviceName);
+		var serviceHelper = servico.getBean();
+		var instancia = servico.instantiate(servicePackage);
+		var ws = instancia.getWsECMSoap();
+		var result = ws.insereMovimentoManutencao(codColigada, xml, chave);
+
+		
+		var erroresult	= result.substring(0, 3);
+		//hAPI.setCardValue(&quot;idmov&quot;,erroresult);
+		//hAPI.setCardValue(&quot;codsuperior2&quot;,result);
+
+		
+		if(erroresult == &quot;555&quot; || erroresult != &quot;FLU&quot;){
+			
+			hAPI.setCardValue(&apos;tipomovimento&apos;,&apos;I&apos;);	
+			
+			throw &quot;&lt;br/&gt;&lt;strong&gt;Ocorreu o Seguinte erro: &lt;/strong&gt;&lt;br/&gt;&quot; + result;
+			
+			}
+			
+		if( erroresult == &quot;FLU&quot;){
+			
+			hAPI.setCardValue(&apos;tipomovimento&apos;,&apos;A&apos;);	
+			var constraintRm_ds_id_movxfluig_hml1 = DatasetFactory.createConstraint(&apos;CHAVEORIGEM&apos;, result, result, ConstraintType.MUST);
+			var datasetRm_ds_id_movxfluig_hml = DatasetFactory.getDataset(&apos;rm_ds_id_movxfluig_hml&apos;, null, new Array(constraintRm_ds_id_movxfluig_hml1), null);
+			
+			hAPI.setCardValue(&apos;idmov&apos;,datasetRm_ds_id_movxfluig_hml.getValue(0,&quot;IDMOV&quot;));
+				
+		}
+		
+	 
+	 
+ } catch(error) { 
+	log.error(error);
+	throw error;
+ }
+ 
+ function formatMoeda(valor){
+		
+		var v = valor.toString();	
+		
+		if (v != &quot;&quot;){
+			
+			var aValores = v.split(&apos;.&apos;);
+			if (aValores.length &lt;= 1)
+				v += &apos;00&apos;;
+			else{
+				if (aValores[1].toString().length &lt;= 1)
+					v = aValores[0].toString() + aValores[1].toString() + &apos;0&apos;;
+				else{
+					
+					//Formata valor em 2 casas decimais
+					var valor = parseFloat(v);
+					valor = valor.toFixed(2);
+					v = valor.toString();
+				}
+			}
+		}
+				
+		v=v.replace(/\D/g,&quot;&quot;); // permite digitar apenas numero 
+		v=v.replace(/(\d{1})(\d{14})$/,&quot;$1.$2&quot;); 	// coloca ponto antes dos ultimos digitos 
+		v=v.replace(/(\d{1})(\d{11})$/,&quot;$1.$2&quot;); 	// coloca ponto antes dos ultimos 11 digitos 
+		v=v.replace(/(\d{1})(\d{8})$/,&quot;$1.$2&quot;); 	// coloca ponto antes dos ultimos 8 digitos 
+		v=v.replace(/(\d{1})(\d{5})$/,&quot;$1.$2&quot;); 	// coloca ponto antes dos ultimos 5 digitos 
+		v=v.replace(/(\d{1})(\d{1,2})$/,&quot;$1,$2&quot;); 	// coloca virgula antes dos ultimos 2 digitos 
+			
+		return v;
+	}
+
+}
+
+function data(){
+	var datetime = new Date();
+	// format the output
+	var month = datetime.getMonth()+1;
+	if (month.toString().length ==1){
+		month=&apos;0&apos;+month;
+	}
+	
+	var day = datetime.getDate();
+	if (day.toString().length ==1){
+		day=&apos;0&apos;+day;
+		
+	}
+	
+	var year = datetime.getFullYear();
+	return day+&apos;/&apos;+month+&apos;/&apos;+year;
+	
+}</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list>
+    <SwimLane>
+      <color>FFFFFF</color>
+      <height>451</height>
+      <width>911</width>
+      <positionX>10</positionX>
+      <positionY>10</positionY>
+      <stateName>Pré Comprometimento</stateName>
+      <type>1</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>9F9F9F</color>
+      <height>112</height>
+      <width>881</width>
+      <positionX>40</positionX>
+      <positionY>10</positionY>
+      <stateName>Demandante</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>C0C0C0</color>
+      <height>112</height>
+      <width>881</width>
+      <positionX>40</positionX>
+      <positionY>122</positionY>
+      <stateName>Integração/Suporte</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>3</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>82b0b7</color>
+      <height>115</height>
+      <width>881</width>
+      <positionX>40</positionX>
+      <positionY>346</positionY>
+      <stateName>Financeiro</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>adc9ac</color>
+      <height>112</height>
+      <width>881</width>
+      <positionX>40</positionX>
+      <positionY>234</positionY>
+      <stateName>Controladoria</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>1</version>
+        <sequence>5</sequence>
+      </swimLanePK>
+    </SwimLane>
+  </list>
+  <list/>
+  <list/>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>10</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>593</positionX>
+      <positionY>135</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>10</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>363</positionX>
+      <positionY>135</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>19</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>473</positionX>
+      <positionY>179</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>20</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>398</positionX>
+      <positionY>204</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>20</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>398</positionX>
+      <positionY>58</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>29</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>652</positionX>
+      <positionY>176</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>29</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>652</positionX>
+      <positionY>89</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>29</linkSequence>
+        <bendSequence>3</bendSequence>
+      </processLinkBendPK>
+      <positionX>367</positionX>
+      <positionY>89</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>29</linkSequence>
+        <bendSequence>4</bendSequence>
+      </processLinkBendPK>
+      <positionX>367</positionX>
+      <positionY>58</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>37</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>205</positionX>
+      <positionY>212</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>37</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>205</positionX>
+      <positionY>58</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>40</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>664</positionX>
+      <positionY>57</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>40</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>664</positionX>
+      <positionY>128</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>40</linkSequence>
+        <bendSequence>3</bendSequence>
+      </processLinkBendPK>
+      <positionX>64</positionX>
+      <positionY>128</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>40</linkSequence>
+        <bendSequence>4</bendSequence>
+      </processLinkBendPK>
+      <positionX>64</positionX>
+      <positionY>181</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>52</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>609</positionX>
+      <positionY>270</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>52</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>475</positionX>
+      <positionY>270</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>53</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>381</positionX>
+      <positionY>404</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>53</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>381</positionX>
+      <positionY>267</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Pagamento de Contrato no RM</processId>
+        <version>37</version>
+        <linkSequence>53</linkSequence>
+        <bendSequence>3</bendSequence>
+      </processLinkBendPK>
+      <positionX>472</positionX>
+      <positionY>267</positionY>
+    </ProcessLinkBend>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list>
+    <ProcessStateService>
+      <companyId>1</companyId>
+      <processId>Pagamento de Contrato no RM</processId>
+      <version>1</version>
+      <sequence>5</sequence>
+      <attempts>0</attempts>
+      <sucessFullMessage>Integração executada com sucesso</sucessFullMessage>
+      <serviceName>wsECM</serviceName>
+      <frequency>1</frequency>
+      <frequencyType>0</frequencyType>
+    </ProcessStateService>
+    <ProcessStateService>
+      <companyId>1</companyId>
+      <processId>Pagamento de Contrato no RM</processId>
+      <version>1</version>
+      <sequence>35</sequence>
+      <attempts>0</attempts>
+      <sucessFullMessage>Integração executada com sucesso</sucessFullMessage>
+      <serviceName>wsECM</serviceName>
+      <frequency>1</frequency>
+      <frequencyType>0</frequencyType>
+    </ProcessStateService>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+</list>

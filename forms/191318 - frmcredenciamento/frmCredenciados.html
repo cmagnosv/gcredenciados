@@ -1,0 +1,1815 @@
+	<html>
+		<head>
+			<title>Form</title>
+			<link rel="stylesheet" type="text/css" href="/style-guide/css/fluig-style-guide.min.css">
+            <script src="/resources/js/jquery/jquery.js"></script>
+            <script src="/resources/js/jquery/jquery-ui.min.js"></script>
+            <script src="/resources/js/mustache/mustache-min.js"></script>
+            <script src="/style-guide/js/fluig-style-guide.min.js"></script>
+
+            <!-- CUSTOM -->
+            <link href="/style-guide/css/fluig-style-guide-filter.min.css" rel="stylesheet" type="text/css">
+            <link href="/style-guide/css/fluig-style-guide-ratingstars.min.css" rel="stylesheet" type="text/css">
+            <script src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+            <script src="/style-guide/js/fluig-style-guide-ratingstars.min.js"></script>
+
+
+            <link href='/webdesk/customresources?cid=1&resourceName=temaFormulario/0.css' type='text/css' rel='stylesheet' />
+		</head>
+        <body class="fluig-style-guide">
+        	<div id ="div_mensagem" style="display: none;">
+        		<div id="mensagem_erro" class="alert alert-danger" role="alert">Você não possui permissão para iniciar este processo.</div>
+        	</div>
+			<div id="div_principal">
+			<form class="totvs-form grid vertical create-form-components ui-sortable t0" name="createFormComponents" style="padding-left: 10px; padding-right: 10px;">
+    <h1 class="title-form-application">SOLICITAÇÃO DE CONTRATAÇÃO CREDENCIADO</h1>
+   
+    <input type="hidden" name="atividadeAtual" id="atividadeAtual">
+    			<input type="hidden" name="codigo" id="codigo">
+				<input type="hidden" name="userLogado" id="userLogado">
+				<input type="hidden" name="nomeLogado" id="nomeLogado">
+				<input type="hidden" name="substituto" id="substituto">
+				<input type="hidden" name="codunidadelogado" id="codunidadelogado">
+				<input type="hidden" name="nomeunidadelogado" id="nomeunidadelogado">
+				<input type="hidden" name="usuario" id="usuario">
+				<input type="hidden" name="codunidadeusuario" id="codunidadeusuario">
+				<input type="hidden" name="despacharPara" id="titulo" id="despacharPara">
+				<input type="hidden" name="titulo" id="titulo">
+				<input type="hidden" name="diretoria" id="diretoria">
+				<input type="hidden" name="diretoria1" id="diretoria1">
+				<input type="hidden" name="idultimaassinatura"	id="idultimaassinatura"	 value=""/>
+				<input type="hidden" name="codsuperior" id="codsuperior">
+				<input type="hidden" name="codsuperior1" id="codsuperior1">
+				<input type="hidden" name="EMAIL" id="EMAIL">
+				<input type="hidden" name="codsuperior2" id="codsuperior2">
+				<input type="hidden" name="codven" id="codven">
+				<input type="hidden" name="codven1" id="codven1">
+				<input type="hidden" name="CODVEN_EMAIL" id="CODVEN_EMAIL">
+				<input type="hidden" name="CODVEN1_EMAIL" id="CODVEN1_EMAIL">
+				<input type="hidden" name="data1" id="data1">
+    			<input type="hidden" name="tipomovimento" id="tipomovimento">
+    			<input type="hidden" name="idcontrato" id="idcontrato">
+    			<input type="hidden" name="edital_gf" id="edital_gf">
+				<input type="hidden" name="sta_contrato" id="sta_contrato">
+				<input type="hidden" name="sta_movimento_pre" id="sta_movimento_pre">
+				<input type="hidden" name="txt_Retorno" id="txt_Retorno">
+				<input type="hidden" name="CODUSUARIORM" id="CODUSUARIORM">
+    			<input type="hidden" name="HabilitaIntegracao" id="HabilitaIntegracao">
+				<input type="hidden" name="HabilitaIntegracaocnt" id="HabilitaIntegracaocnt">
+    			<input type="hidden" name="xmlcnt" id="xmlcnt">
+    			
+    <div id="div_1_parte">
+
+
+<div class="card">
+                <div class="card-body">
+                <h3 class="card-title">Informação Básica</h3>
+<div class="row">
+    				<div class="col-md-6">
+					<label for="codigo_fluig">Codigo FLUIG</label>
+<input type="text" class="form-control" name="codigoFluig" id="codigoFluig" value="" placeholder="Codigo FLUIG" data-size="big" maxlength="255">				
+</div>
+
+    				<div class="col-md-6">
+					<label for="DataCriacao">Data Criação</label>
+<input type="text" class="form-control" name="DataCriacao" id="DataCriacao" value="" placeholder="Data automatica, gerada após salvar este processo" data-size="big" maxlength="255">				
+</div>
+</div>
+
+
+
+<div class="row">
+    <div id="divComprometimento" class="col-md-6" >
+        
+    <label>PréComprometimento</label>
+    
+   <br><input type="text" class="form-control" name="idmov" id="idmov" value="" placeholder="Codigo do RM" data-size="big" maxlength="255"  onclick="">
+<div id="btcnt"><button class="btn btn-info" id="idGerarRelatorioContratoRM" onclick="GerarRelatorioRM()">Impressão</button></div>   	</div>
+<div id="divContrato" class="col-md-6" >
+        
+    <label>IDCONTRATO</label>
+    
+   <br><input type="text" class="form-control" name="IDCNT" id="IDCNT" value="" placeholder="Codigo do CONTRATO" data-size="big" maxlength="255">
+	</div>
+</div>
+
+
+    			<div class="row" id="identificacao">
+				<div class="col-md-6" >
+					<label for="Solicitante">Solicitante</label>
+					<input type="text"
+								class="form-control" name="Solicitante" id="Solicitante"  value="" 
+								data-size="big" maxlength="255" readonly="true" placeholder="Usuário logado que criou este processo">
+				</div>
+				<div class="col-md-6" >
+					<label for="Unidade">Unidade</label>
+					<input type="text"
+								class="form-control" name="Unidade" id="Unidade" value="" 
+								data-size="big" maxlength="255" readonly="true" placeholder="Unidade na qual o usuario esta vinculado">
+				</div>
+				
+</div>
+
+				<div class="row" id="1_parte_contrato">
+						<div class="col-md-4" >
+					<label for="dscdiretoria">Diretoria</label>
+					<input type="text"
+								class="form-control" name="dscdiretoria" id="dscdiretoria" value="" 
+								data-size="big" maxlength="255" readonly="true" placeholder="">
+				</div>
+				<div class="col-md-4" >
+					<label for="superior">Superior(Gerente, Preposto ou Diretor)</label>
+					<input type="text"
+								class="form-control" name="superior" id="superior" value="" 
+								data-size="big" maxlength="255" readonly="true">
+				</div>
+				<div class="col-md-4" >
+					<label for="superior1">Superior 2° Nivel(Preposto ou Diretor)</label>
+					<input type="text"
+								class="form-control" name="superior1" id="superior1" value="" 
+								data-size="big" maxlength="255" readonly="true" placeholder="Unidade na qual o usuario esta vinculado">
+				</div>
+
+    
+    
+    </div>
+    </div>
+</div>
+</div>
+<br>
+<div class="card">
+                <div class="card-body">
+                <h3 class="card-title">Informação do Contrato</h3>
+                
+    				<div class="row" id="1_parte_contrato">
+    				<div class="col-md-6" >
+					<label for="numeroContrato">Número Carta Contrato</label>
+					<input type="text"
+								class="form-control" name="numeroContrato" id="numeroContrato" value="" 
+								data-size="big" maxlength="255" onchange="ncontrato(this)">
+												</div>
+				<div class="col-md-6" >
+					<label for="codigoContrato">Codigo do Contrato</label>
+					<input type="text"
+								class="form-control" name="codigoContrato" id="codigoContrato" value="" 
+								data-size="big" maxlength="255" >
+								<div id="divContrato1"><button class="btn btn-info" id="idGerarRelatorioContratoRM" onclick="GerarContratoRM()">Resumo Contrato</button></div>
+				</div>
+				</div>
+				
+    <div class="row" id="div_credenciado">
+    <div class="col-md-5" >
+    <div class="form-field" data-type="zoom" data-show-properties="" data-field-name="credenciado">
+    <div class="form-input">
+    <div class="form-group"><label>Credenciado</label>
+    <input type="zoom" class="form-control" name="credenciado" id="credenciado"
+													data-zoom="{												
+														'displayKey':'NOMEFANTASIA',
+														'datasetId':'ds_fornecedor',
+														'filterValues': 'CODTCF,50,PESSOAFISOUJUR,J',
+														'fields':[													
+														{
+														'field':'CODCFO',
+														'label':'CODCFO'
+														},
+															
+														{
+														'field':'NOMEFANTASIA',
+														'label':'NOMEFANTASIA'
+														
+														}
+														,
+														{'field':'DESCBANCO','visible':'false'}
+														,
+														{'field':'FONE','visible':'false'}
+														,
+														{'field':'EMAIL','visible':'false'}
+														]
+													}"
+													placeholder="Escolha o Credenciado" />
+													<input type="hidden" name="idcredenciado" id="idcredenciado">
+
+													</div>
+													</div>
+													</div>
+</div>
+    
+<div class="col-md-3" >
+					<label for="bancocredenciado">Informações Bancárias</label>
+					<input type="text"
+								class="form-control" name="bancocredenciado" id="bancocredenciado"  value="" 
+								data-size="big" maxlength="255" readonly="true">
+				</div>
+				    
+<div class="col-md-2" >
+					<label for="fonecredenciado">Fone</label>
+					<input type="text"
+								class="form-control" name="fonecredenciado" id="fonecredenciado"  value="" 
+								data-size="big" maxlength="255" readonly="true">
+				</div>
+    
+    <div class="col-md-2" >
+					<label for="emailcredenciado">e-mail</label>
+					<input type="text"
+								class="form-control" name="emailcredenciado" id="emailcredenciado"  value="" 
+								data-size="big" maxlength="255" readonly="true">
+				</div>
+    			
+						</div>
+<div class="row" id="2_parte_contrato">
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<label for="prodsebrae">Produto SEBRAE-MA</label> <input type="zoom"
+								class="form-control" name="prodsebrae" id="prodsebrae"
+								data-zoom="{
+											'displayKey':'DESCRICAO',
+											'datasetId':'rm_ds_produto_sebrae',
+											'fields':[
+														{'field':'CODTB4FAT', 'visible':'false'},
+														{'field':'DESCRICAO','visible':'true'}
+													]}" 
+													/>
+							<input type="hidden" name="CODTB4FAT" id="CODTB4FAT"/>
+						</div>
+						  
+						 <div class="col-xs-4 col-sm-4 col-md-4">
+							<label for="evento">evento SAS</label> <input type="zoom"
+								class="form-control" name="evento" id="evento"
+								data-zoom="{
+											'displayKey':'TituloEvento',
+											'datasetId':'ds_eventos',
+											'fields':[
+														{'field':'CodEvento', 'visible':'false'},
+														{'field':'Sistema','label':'Sistema','visible':'false'},
+														{'field':'TituloEvento','visible':'true'},
+														{'field':'codunidade','visible':'false'},
+														{'field':'quantidade','visible':'false'}
+													]}" 
+													/>
+							
+						<input type="hidden" name="CodEvento" id="CodEvento"/>
+						<input type="hidden" name="Sistema" id="Sistema"/>
+						</div> 
+						
+						   <div class="col-md-4" >
+    <div class="form-group"><label>Origem Recurso</label>
+    <select name="origemrecurso" id="origemrecurso" class="form-control" dataset="ds_RM_origem_recurso" datasetkey="CODTB2FAT" datasetvalue="DESCRICAO"></select>
+    													
+													</div>
+													</div>
+				</div>
+						  
+<div class="row form-input">
+ 
+													
+													<div class="col-md-4" >
+    <div class="form-field" data-type="zoom" data-show-properties="" data-field-name="departamento">
+    <div class="form-input">
+    <div class="form-group"><label>Departamento</label>
+    <input type="zoom"
+											class="form-control" name="departamento"
+											id="departamento"
+											data-zoom="{
+															
+																'displayKey':'NOME',
+																'datasetId':'ds_rm_departamento',
+																'placeholder':'Escolha o Setor demandante',
+																'fields':[
+																
+																	{
+																	'field':'CODDEPARTAMENTO',
+																	'label':'CODDEPARTAMENTO',
+																	'visible':'true',
+																	'standard':'true'
+																	},																																																														
+																	{
+																	'field':'NOME',
+																	'label':'Titulo',
+																	'visible':'true'
+																	}	
+																													
+																]
+															}" placeholder="Escolha o Setor demandante"/>
+    													
+												<input type="hidden" name="coddepartamento" id="coddepartamento" />
+													</div>
+													</div>
+													</div>
+</div>
+
+<div class="col-md-4" >
+   <div class="form-field" data-type="combo" data-show-properties="" data-field-name="catobj" >
+      <div class="form-input">
+         <div class="form-group">
+            <label> Categoria da descrição do objeto</label>
+            <select class="form-control" id="catobj" name="catobj" dataset="rm_ds_catobjeto" datasetvalue="NOME" datasetkey="CODIGO" datasetorder="NOME"></select>
+         </div>
+      </div>
+   </div>
+</div>
+
+   <div class="col-xs-4 col-sm-4 col-md-4">
+	<div id="btresolucaoValor"><button class="btn btn-primary" id="idresolucaoValor" onclick="AbreJanela('resolucaoValor','https://fluig.ma.sebrae.com.br/portal/p/1/ecmnavigation?app_ecm_navigation_doc=75572')">Valor Hora maior que o da Resolução ?</button></div>
+	<select class="form-control" name="valorHora" id="valorHora">
+		<option value="0" selected>Selecione</option>
+		<option value="S">Sim</option>									
+		<option value="N">Não</option>
+		</select>
+</div>
+</div>
+
+						
+
+											
+				<div class="row" id="div_prazo_contrato">							
+	<div class="col-md-6" >
+      <div class="form-field" data-type="date" data-show-properties="" data-field-name="DATAINICIO">
+      <div class="form-input">
+         <div class="form-group"><label>DATA INICIO</label><input id="DATAINICIO" type="text" class="form-control" name="DATAINICIO" data-date="" onchange="parcelasContrato();"></div>
+      </div>
+   </div>
+  
+</div>
+
+   <div class="col-md-6" >
+    <div class="form-field" data-type="date" data-show-properties="" data-field-name="DATAFIM" style="position: relative; left: 0px; top: 0px;">
+      <div class="form-input">
+         <div class="form-group"><label>DATA FIM</label>
+         <input id="DATAFIM" type="text" class="form-control" name="DATAFIM" data-date="" onchange="parcelasContrato();"></div>
+      </div>
+   </div>
+   </div>
+      
+ </div>
+ <div class="row">
+    <div class="col-md-4" >
+    <div class="form-field" data-type="date" data-show-properties="" data-field-name="DATAASSINATURA" style="position: relative; left: 0px; top: 0px;">
+      <div class="form-input">
+         <div class="form-group"><label>DATA ASSINATURA</label><input id="DATAASSINATURA" type="text" class="form-control" name="DATAASSINATURA" data-date=""></div>
+      </div>
+   </div>
+   </div>
+   <div class="col-md-4" >
+    <div class="form-field" data-type="date" data-show-properties="" data-field-name="DATAVIGENCIA" style="position: relative; left: 0px; top: 0px;">
+      <div class="form-input">
+         <div class="form-group"><label>DATA DE VIGÊNCIA</label><input id="DATAVIGENCIA" type="text" class="form-control" name="DATAVIGENCIA" data-date=""></div>
+      </div>
+     
+   </div>
+   </div>
+      <div class="col-md-4" >
+    <label for="parcelas">Parcelas</label>
+					<input type="text" class="form-control" name="parcelas" id="parcelas" value="" data-size="big" maxlength="4">
+   </div>  </div>
+    <div class="form-field" data-type="textarea" data-show-properties="" data-field-name="justificativa">
+        <div class="form-input">
+            <div class="form-group"><label>Justificativa da Contratação</label><textarea id="justificativa" name="justificativa" class="form-control" rows="3"></textarea></div>
+        </div>
+    </div>
+
+    <div class="form-field" data-type="textarea" data-show-properties="" data-field-name="obs">
+        <div class="form-input">
+            <div class="form-group"><label>Observações da Contratação</label><textarea id="obs" name="obs" class="form-control" rows="3"></textarea></div>
+        </div>
+    </div>    
+    
+    </div>
+    </div>
+    <br>
+    <div class="card">
+                <div class="card-body">
+                <h3 class="card-title">Informação do Rateio</h3>
+    
+<div class="panel-body" id="Rateio">
+						<div class="form-group row">
+							<div class="col-xs-12 col-sm-12 col-md-12">								
+								<div class="table-condensed">
+									<div class="form-group" id="btn_adicionarChild_rateio">
+										<input type="button" onclick="adicionaTbRateio();" value="Adicionar rateio" class="btn btn-info" customFnDelete="fnCustomDelete(this)"/>
+									</div>																					
+									<table border="0" class="table table-striped table-bordered" tablename="tb_rateio" id="tb_rateio" noaddbutton="true" addbuttonclass="btn btn-info">
+										<thead>
+											<tr>
+												<td class="col-xs-1 col-sm-1 col-md-1"><b>Item</b></td>
+												<td class="col-xs-3 col-sm-3 col-md-3"><b>Serviço</b></td>
+												<td class="col-xs-5 col-sm-5 col-md-5"><strong>Projeto/Ação/Unidade</strong></td>
+												<td class="col-xs-3 col-sm-3 col-md-2"><b>Valor</b></td>
+											</tr>
+										</thead>
+				
+										<tbody>
+											<tr>
+												<td class="col-xs-1 col-sm-1 col-md-1">
+													<input class="form-control" type="text" name="item" id="item" onclick="insereitem(this,'tb_rateio')"/>
+													</td>
+												</td>
+											<td class="col-xs-3 col-sm-3 col-md-3">
+											<label for="servico">Serviço</label>
+								<input type="zoom" class="form-control" name="servico" id="servico"
+													data-zoom="{												
+														'displayKey':'NOMEFANTASIA',
+														'datasetId':'ds_servico_credenciado',
+														'fields':[													
+														{
+														'field':'IDPRD',
+														'standard':'true',
+														'visible':'false'
+														},
+														{
+														'field':'NOMEFANTASIA',
+														'label':'NOMEFANTASIA'
+														
+														},
+														{
+														'field':'CODTB1FAT',
+														'visible':'false'
+														
+														},
+														{
+														'field':'NATUREZA',
+														'visible':'false'
+														
+														}
+														]
+													}"
+													placeholder="Escolha o serviço"/>
+										<input type="hidden" name="codtb1fat" id="codtb1fat"> 
+										<input type="hidden" name="idproduto" id="idproduto"> 
+
+										
+										<button type="button" class="btn btn-primary" name= "btnat" onClick="mostraLista(this)">Selecionar Manualmente a Natureza</button> 
+										<div id="nu" class="row">
+																	<label for="dscnatureza">Natureza da Despesa</label>
+																	<input class="form-control" type="text" name="dscnatureza" id="dscnatureza" readonly /> 
+																	
+																	</div>
+																	<div id="nd" class="row"  style="display: none;" > 
+																	<label for="natureza_zoom">Ou escolha manualmente a natureza aqui</label> 
+											<input  type="zoom" class="form-control" name="natureza_zoom" id="natureza_zoom" data-zoom="{
+															'displayKey':'DESCRICAO',
+															'datasetId':'ds_rm_naturezanucleus',
+															'fields':[{'field':'DESCRICAO','visible':'true'},
+																{'field':'CODTB1FAT','visible':'false'}]}"
+																	/>
+																	 
+																	
+																	</div>
+
+												</td>
+												
+												<td class="col-xs-6 col-sm-6 col-md-6">
+													<input type="zoom" class="form-control" name="projeto_zoom" id="projeto_zoom"
+													data-zoom="{
+														'displayKey':'NOME',
+														'datasetId':'rm_ds_projeto',
+														'fields':[															
+														{
+														'field':'CODCCUSTO',
+														'label':'CODCCUSTO'
+														},																
+														{
+														'field':'NOME',
+														'label':'NOME'
+														}
+														]
+													}" onclick="validaServico(this)"
+													placeholder="Escolha o projeto, para filtar a ação" />
+													<input type="hidden" class="form-control" name="validaProjeto" id="validaProjeto">
+													<br>
+													<input type="zoom" class="form-control" name="acao_zoom" id="acao_zoom" 
+													data-zoom="{												
+														'displayKey':'NOME',
+														'datasetId':'rm_ds_acao',
+														'fields':[															
+														{
+														'field':'CODCCUSTO',
+														'label':'CODCCUSTO'
+														},																
+														{
+														'field':'NOME',
+														'label':'NOME'
+														},
+														{
+														'field':'CODPROJETO',
+														'label':'CODPROJETO'
+														}
+														]
+													}"
+													placeholder="Escolha a ação para filtrar a unidade" />
+													<input type="hidden" class="form-control" name="validaAcao" id="validaAcao">
+													</br>
+													<input type="zoom" class="form-control" name="centroCusto_zoom" id="centroCusto_zoom" onChange="mascara()"
+													data-zoom="{												
+														'displayKey':'NOME',
+														'datasetId':'rm_ds_unidade',
+														'fields':[													
+														{
+														'field':'CODCCUSTO',
+														'label':'CODCCUSTO'
+														},
+															
+														{
+														'field':'NOME',
+														'label':'NOME'
+														},
+														{
+														'field':'CODPRJACAO',
+														'label':'CODPRJACAO'
+														}
+														]
+													}"
+													placeholder="Escolha a unidade"/>
+													<input type="hidden" class="form-control" name="validaUnidade"	id="validaUnidade">
+													<input type="hidden" class="form-control" name="codCusto" 		id="codCusto">
+													
+												</td>
+												
+												<td class="col-xs-3 col-sm-3 col-md-3">
+													<input type="hidden" class="form-control" name="valorRateio" id="valorRateio">
+													<input type="text" class="form-control" name="valorRatMoeda" onchange="rateio1(this);" id="valorRatMoeda">
+												</td>
+												
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>	
+					</div>
+	
+        <div class="row">
+<div  id="_div_totalitens_1">			
+<div class="col-md-4">
+<label for="totalitens">Valor Total do Contrato</label>
+<input type="text" name="totalitens" id="totalitens"	value="0,0"  />
+</div>
+<div class="col-md-4">
+<label for="totalitenspag">Valor Total Parcelas</label>
+<input type="text" name="totalitenspag" id="totalitenspag"	value="0,0"  />
+</div>
+<div class="col-md-4">					
+<label for="saldoitenspag">saldo Parcelas</label>
+<input type="text" name="saldoitenspag" id="saldoitenspag"	value="0,0"  />
+</div>					
+<div id="divCaminho">
+
+				<br>AUTORIZAÇÃO <input type="text" name="autoriza1" id="autoriza1"></br>
+				1° ASSINATURA <input type="text" name="assinatura1" id="assinatura1">
+				<br>2° ASSINATURA <input type="text" name="assinatura2" id="assinatura2"></br>
+				PERCENTUAL LIMITE LICITAÇÃO <input type="text" name="resultado_limitelicitacao" id="resultado_limitelicitacao">
+				<br>Caminho: <input type="text" name="caminho" id="caminho"></br>
+				LIMITE LICITAÇÃO <input type="text" name="limitelicitacao" id="limitelicitacao">
+				
+</div>				
+</div>
+
+</div>	
+				</div>
+					</div>
+					<br>
+					
+				<div class="card">
+                <div class="card-body">
+                <h3 class="card-title">Informação do Rateio</h3>	      
+    <!-- INICIO DOCUMENTO EM PAIFILHO -->
+    
+    <div class="panel-body">
+						<div class="form-group row">
+							<div class="col-xs-12 col-sm-12 col-md-12">								
+								<div class="table-condensed">
+									<div class="form-group" id="btn_adicionarChild_docs">
+										<input type="button" onclick="wdkAddChild('tb_docs')" value="Adicionar documentos" class="btn btn-info" customFnDelete="fnCustomDelete(this)"/>
+									</div>																					
+									<table border="0" class="table table-striped table-bordered" tablename="tb_docs" id="tb_docs" noaddbutton="true" addbuttonclass="btn btn-info">
+										<thead>
+											<tr>
+												<td class="col-xs-1 col-sm-1 col-md-1"><b>Ordem</b></td>
+												<td class="col-xs-4 col-sm-4 col-md-4"><b>Documentos</b></td>
+												<td class="col-xs-6 col-sm-6 col-md-6"><b>nome do arquivo</b></td>
+												<td class="col-xs-1 col-sm-1 col-md-1"><b>Ação</b></td>												
+											</tr>
+										</thead>
+				
+										<tbody>
+											<tr>
+											
+											<td class="col-xs-1 col-sm-1 col-md-1">
+											
+											<input type="text" class="form-control" name="ORDEMDOCS" id="ORDEMDOCS" onclick="insereitem(this,'tb_docs')">
+																							</td>
+																											<td class="col-xs-4 col-sm-4 col-md-4">							
+<input  type="zoom" class="form-control" name="DOCS" id="DOCS"
+													data-zoom="{												
+														'displayKey':'NOME',
+														'datasetId':'ds_credenciado_docs',
+														'fields':[													
+														{
+														'field':'CODIGO',
+														'visible':'false'
+														},
+															
+														{
+														'field':'NOME',
+														'label':'NOME'
+														}
+														]
+													}"
+													placeholder="Escolha o documento a ser anexado"/>
+													</td>
+																								<td class="col-xs-6 col-sm-6 col-md-6">
+<input type="text" class="form-control" name="CODIGODOCS_filho" id="CODIGODOCS_filho">
+</td>
+<td class="col-xs-1 col-sm-1 col-md-1">	
+<input id="anexar" type="button" onclick="anexadocs(this)" value="Anexar" class="btn btn-info"/>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>	
+					</div>
+    
+    
+    <!-- FIM DOCUMENTO EM PAI FILHO -->
+    
+    </div>
+    </div>
+    <!-- Concordancia do superior -->
+				
+				<div class="panel panel-info" id="concordanciaSuperior">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> Concordância Autorizante</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+						
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<label for="ConcordanciaSuperior">Concordância</label>
+								<select class="form-control" name="ConcordanciaSuperior" id="ConcordanciaSuperior">
+									<option value="0" selected>Selecione</option>
+									<option value="S">Sim</option>									
+									<option value="Ajustar">Ajustar</option>
+								<!--	<option value="N">Cancelar</option> -->
+								</select>
+							</div>
+							
+							<div class="col-xs-7 col-sm-7 col-md-7">
+								<label for="nomeSuperior">Aprovador</label>
+								<input type="text" class="form-control" name="nomeSuperior" id="nomeSuperior">
+								<input type="hidden" class="form-control" name="dataSuperiorAprovacao" id="dataSuperiorAprovacao">
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<label for="ParecerSuperior">Parecer</label>
+								<textarea class="form-control" name="ParecerSuperior" id="ParecerSuperior" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+				
+    
+      <!-- fim Concordancia do Superior -->
+
+<!-- Concordancia do diretor da area sobre as horas acima da resolução -->
+				
+<div class="panel panel-info" id="idconcordanciaSuperiorValorHoras">
+	<div class="panel-heading ">
+		<h3>
+			<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> Concordância diretor da área sobre horas superior à Resolução vigente</strong>
+		</h3>
+	</div>
+	
+	<div class="panel-body">
+		<div class="form-group row">
+		
+			<div class="col-xs-2 col-sm-2 col-md-2">
+				<label for="ConcordanciaValorHoras">Concordância</label>
+				<select class="form-control" name="ConcordanciaValorHoras" id="ConcordanciaValorHoras">
+					<option value="0" selected>Selecione</option>
+					<option value="S">Autorizo</option>	
+					<option value="A">Ajustar Horas</option>														
+					<option value="N">Cancela Processo</option>
+				</select>
+			</div>
+			
+			<div class="col-xs-7 col-sm-7 col-md-7">
+				<label for="nomeSuperiorValorHoras">Aprovador</label>
+				<input type="text" class="form-control" name="nomeSuperiorValorHoras" id="nomeSuperiorValorHoras">
+			</div>
+			<div id="idParecerSuperiorValorHoras" class="col-xs-12 col-sm-12 col-md-12">
+				<label for="ParecerSuperiorValorHoras">Parecer</label>
+				<textarea class="form-control" name="ParecerSuperiorValorHoras" id="ParecerSuperiorValorHoras" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+			</div>
+			
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- fim Concordancia do diretor da area sobre as horas acima da resolução -->
+
+ <!-- homologaÃ§Ã£o da controladoria -->
+				
+				<div class="panel panel-info" id="controladoria">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> Homologação da Controladoria</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+						
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<label for="HomologacaoControladoria">Conformidade</label>
+				
+								<select class="form-control" name="HomologacaoControladoria" id="HomologacaoControladoria">
+									<option value="" selected>Selecione</option>
+									<option value="Sim">Sim</option>
+									<option value="Ajustar">Ajustar</option>
+								</select>
+							</div>
+							
+							<div class="col-xs-7 col-sm-7 col-md-7">
+								<label for="nomeControladoria">Controladoria</label>
+								<input type="text" class="form-control" name="nomeControladoria" id="nomeControladoria">
+								<input type="hidden" class="form-control" name="dataHomologacaoControladoria" id="dataHomologacaoControladoria">
+							</div>
+							
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<label for="ParecerControladoria">Parecer da Controladoria</label>
+								<textarea class="form-control" name="ParecerControladoria" id="ParecerControladoria" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+				
+    
+      <!-- fim homologaÃ§Ã£o da controladoria --> 
+           
+   <!-- Parecer Unidades TÃ©cnicas -->
+				
+				<div class="panel panel-info" id="UnidadesTecnicas">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> Parecer Unidades Técnicas</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+						
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<label for="conformidadeParecerTecnico">Conformidade</label>
+								<select class="form-control" name="conformidadeParecerTecnico" id="conformidadeParecerTecnico">
+									<option value="" selected>Selecione</option>
+									<option value="S">Sim</option>
+									<option value="Ajustar">Ajustar</option>
+								</select>
+							</div>
+							
+							<div class="col-xs-7 col-sm-7 col-md-7">
+								<label for="nomeTecnico">Técnico</label>
+								<input type="text" class="form-control" name="nomeTecnico" id="nomeTecnico">
+								<input type="hidden" class="form-control" name="dataParecerTecnico" id="dataParecerTecnico">
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<label for="parecerTecnico">Parecer Técnico</label>
+								<textarea class="form-control" name="parecerTecnico" id="parecerTecnico" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+				
+    
+      <!-- fim Parecer Unidades TÃ©cnicas --> 
+   
+ <!-- Autorizacao Contrato -->
+				
+				<div class="panel panel-info" id="autorizacao">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> Autorização Contrato</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+						
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<label for="AutorizacaoContrato">Autorizado?</label>
+								<select class="form-control" name="AutorizacaoContrato" id="AutorizacaoContrato" onchange="habilitajustificativaAutorizacao()">
+									<option value="" selected>Selecione</option>
+									<option value="S">Sim</option>
+									<option value="N">Não</option>
+								</select>
+							</div>
+							
+							<div class="col-xs-7 col-sm-7 col-md-7">
+								<label for="nomeAutorizante">Autorizante</label>
+								<input type="text" class="form-control" name="nomeAutorizante" id="nomeAutorizante">
+								<input type="hidden" class="form-control" name="dataAutorizante" id="dataAutorizante">
+							</div>
+							
+						</div><div class="form-group row" id="idJustificativaAutorizacao">
+												<div class="col-xs-12 col-sm-12 col-md-12">
+								<label for="JustificativaAutorizacao">Justificativa</label>
+								<textarea class="form-control" name="JustificativaAutorizacao" id="JustificativaAutorizacao" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+							</div>
+							</div>
+					</div>
+					
+				</div>
+				
+    
+      <!-- fim autorizaÃ§Ã£o Contrato Superior -->    
+      
+      <!-- Assinatura Contrato fornecedor em desuso 
+				
+				<div class="panel panel-info" id="divassinatura0">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> Assinatura do fornecedor</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<label for="AssinouContratoFornecedor">Assinou?</label>
+								<select class="form-control" name="AssinouContratoFornecedor" id="AssinouContratoFornecedor" onchange="fornecedorAssinou()">
+									<option value="" selected>Selecione</option>
+									<option value="Sim">Sim</option>
+									<option value="Nao">Não</option>
+								</select>
+								<input type="hidden" class="form-control" name="dataAssinouContratoFornecedor" id="dataAssinouContratoFornecedor">
+							</div>
+						</div>
+						<div class="form-group row" id="idAssinouFornecedor">
+												<div class="col-xs-12 col-sm-12 col-md-12">
+								<label for="AssinouFornecedor">Justificativa</label>
+								<textarea class="form-control" name="AssinouFornecedor" id="AssinouFornecedor" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+							</div>
+							</div>
+					</div>
+					
+				</div>
+				
+    -->
+      <!-- fim Assinatura Contrato fornecedor -->   
+      
+ <!-- Assinatura Contrato Superior -->
+				
+				<div class="panel panel-info" id="divassinatura1">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> 1° Assinatura Contrato</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+					
+					
+							<div class="col-xs-7 col-sm-7 col-md-7">
+								<label for="nomeAssinanteSuperior">Nome Superior</label>
+								<input type="text" class="form-control" name="nomeAssinanteSuperior" id="nomeAssinanteSuperior">
+								<input type="hidden" class="form-control" name="dataAssinanteSuperior" id="dataAssinanteSuperior">
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+    
+      <!-- fim Assinatura Contrato Superior -->     	
+	
+		<!-- Assinatura Contrato Superior 2 -->
+				
+				<div class="panel panel-info" id="divassinatura2">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> 2° Assinatura Contrato</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+						
+							<div class="col-xs-7 col-sm-7 col-md-7">
+								<label for="nomeAssinanteSuperior2">Nome Superior</label>
+								<input type="text" class="form-control" name="nomeAssinanteSuperior2" id="nomeAssinanteSuperior2">
+								<input type="hidden" class="form-control" name="dataAssinanteSuperior2" id="dataAssinanteSuperior2">
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+    
+      <!-- fim Assinatura Contrato Superior 2 -->    
+
+
+		<!-- area solicitante, ajustes solicitados-->
+				
+				<div class="panel panel-info" id="idajustes">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> Descrição do que foi ajustado</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<label for="idDecisaoAjuste">Decisão sobre o ajuste</label>
+								<select class="form-control" name="idDecisaoAjuste" id="idDecisaoAjuste">
+									<option value="S" selected>Ajustado</option>
+									<option value="C">Cancelar Processo</option>
+								</select>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+<label for="ajustes">Informativo do que foi ajustado</label>
+								<textarea class="form-control" name="ajustes" id="ajustes" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+    
+      <!-- fim area solicitante, ajustes solicitados -->   
+	
+	 <!-- CONTRATOS -->
+				
+				<div class="panel panel-info" id="divcontratos">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> Parecer Contratos</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+						
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<label for="contratocadastrado">Contrato cadastrado ?</label>
+								<select class="form-control" name="contratocadastrado" id="contratocadastrado">
+									<option value="" selected>Selecione</option>
+									<option value="S">Sim</option>
+									<option value="Ajustar">Solicitar ajuste</option>
+								</select>
+							</div>
+							
+							<div class="col-xs-7 col-sm-7 col-md-7">
+								<label for="nomeTecnicocontrato">Técnico(a)</label>
+								<input type="text" class="form-control" name="nomeTecnicocontrato" id="nomeTecnicocontrato">
+								<input type="hidden" class="form-control" name="dataTecnicocontrato" id="dataTecnicocontrato">
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<label for="parecerTecnicocontrato">Parecer Técnico</label>
+								<textarea class="form-control" name="parecerTecnicocontrato" id="parecerTecnicocontrato" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+				
+    
+      <!-- fim CONTRATOS --> 
+	 <!-- pagamentos -->
+				
+				<div class="panel panel-info" id="divpagamentos">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i>Processo Solicitar Pagamento</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						
+						<div class="form-group row">
+
+<div class="col-xs-2 col-sm-2 col-md-2">	
+	Nota Fiscal
+	<input type="text" class="form-control" name="pag_nf_f" id="pag_nf_f" onclick="parcela()"></div>
+	<div class="col-xs-2 col-sm-2 col-md-2">
+Data Pagamento
+<input type="text" class="form-control" name="pag_data_f" id="pag_data_f"></div>
+<div class="col-xs-2 col-sm-2 col-md-2">
+	Parcela
+			<input type="text" class="form-control" name="pag_parcela_f" id="pag_parcela_f" value="0">	
+			</div>
+			<div class="col-xs-2 col-sm-2 col-md-2">pago atual
+			<input type="text" class="form-control" name="pag_pago_atual_f" id="pag_pago_atual_f" value=0 onchange="calcpago()">	
+</div></div>
+<div class="form-group row">
+Justificativa
+			<textarea class="form-control" onclick="preenchepag(this)" name="parecerTenviaParaPagamentos_f" id="parecerTenviaParaPagamentos_f" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+			
+</div>
+							
+
+							
+						</div>
+					</div>
+
+
+					
+					
+				</div>
+				
+    
+      <!-- fim pagamentos --> 
+	
+	
+      <!-- arquivo-->
+				
+				<div class="panel panel-info" id="divarquivo">
+					<div class="panel-heading ">
+						<h3>
+							<strong><i class="fluigicon fluigicon-moderator fluigicon-md"></i> Processo Arquivamento</strong>
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="form-group row">
+						
+							<div class="col-xs-2 col-sm-2 col-md-2">
+								<label for="arquivo">Arquivar ?</label>
+								<select class="form-control" name="arquivo" id="arquivo">
+									<option value="" selected>Selecione</option>
+									<option value="S">Sim</option>
+									<option value="Ajustar">Solicitar Mais informações</option>
+								</select>
+							</div>
+							
+							<div class="col-xs-7 col-sm-7 col-md-7">
+								<label for="nomeTecnicoarquivo">Técnico(a)</label>
+								<input type="text" class="form-control" name="nomeTecnicoarquivo" id="nomeTecnicoarquivo">
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<label for="parecerTecnicoarquivo">Parecer Técnico</label>
+								<textarea class="form-control" name="parecerTecnicoarquivo" id="parecerTecnicoarquivo" rows="5" wrap="on" style="font: bold 18px Calibri, Helvetica, sans-serif; text-align: justify;"></textarea>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+				
+    
+      <!-- fim arquivp--> 
+	</form>
+		</div>
+
+			<script type="text/javascript">
+			
+			function parcelasContrato(){
+				
+				if(document.getElementById("DATAINICIO").value!="" && document.getElementById("DATAFIM").value!=""){
+					let dataInicio= document.getElementById("DATAINICIO").value.split("/");
+					let dataFim=document.getElementById("DATAFIM").value.split("/");
+					let parcelas = dataFim[1]-dataInicio[1];
+					document.getElementById("parcelas").value= parcelas==0 ? 1: parcelas;
+				}
+					 
+				}
+					
+			
+			
+			
+			
+			function AbreJanela(janela,endereco){
+				window.open(endereco,janela);
+			}
+
+			function adicionaTbRateio(){
+				wdkAddChild('tb_rateio');
+
+			}
+
+			function insereitem(campo,tabela){
+				var rows = document.getElementById(tabela).getElementsByTagName("tbody")[0].getElementsByTagName("tr");  
+				var linhas = rows.length -1;
+				//var item= campo.id.split("___");
+				document.getElementById(campo.id).value=linhas;
+				
+			}
+
+			/*if(document.getElementById("atividadeAtual").value=="18"){ // gerente
+				
+				if(document.getElementById("ParecerSuperior").value!=undefined ){
+					alert("Foi solicitado o seguinte ajuste: \n"+document.getElementById("ParecerSuperior").value);	
+				}
+			}
+				
+				if(document.getElementById("atividadeAtual").value=="32"){ // gerencia
+					
+				if(document.getElementById("parecerTecnico").value!=undefined ){
+					alert("Foi solicitado o seguinte ajuste: \n"+document.getElementById("parecerTecnico").value);	
+				}
+				}
+				
+				if(document.getElementById("atividadeAtual").value== "25"){ //controladoria
+					
+					if(document.getElementById("ParecerControladoria").value!=undefined ){
+						alert("Foi solicitado o seguinte ajuste: \n"+document.getElementById("ParecerControladoria").value);	
+					}
+					
+				
+			}
+				
+			if(document.getElementById("atividadeAtual").value=="14"){
+				if(document.getElementById("ajustes").value!=undefined ){
+					alert("Foi ajustado os seguintes itens: \n"+document.getElementById("ajustes").value);	
+				}
+			}
+			*/
+			
+			function ncontrato(campo){
+				
+				document.getElementById('codigoContrato').value="MG."+((campo.value).replace((new Date).getFullYear(),"")).replace(/[^0-9]/g,"")+"."+((new Date).getFullYear()) % 100;
+			}
+			
+			function abrirpagamento(campo){
+					window.open ('http://fluigteste.ma.sebrae.com.br/portal/p/1/pageworkflowview?app_ecm_workflowview_processInstanceId=1289', 'popup');
+			}
+			
+			function habilitajustificativaAutorizacao(){
+				if(document.getElementById("AutorizacaoContrato").value=="Sim"){
+					document.getElementById('idJustificativaAutorizacao').style.display = 'none';	// oculto
+					
+				} else{
+					document.getElementById('idJustificativaAutorizacao').style.display = 'block';	// visivel
+				}
+							
+			}
+			
+			function fornecedorAssinou(){
+				
+				if(document.getElementById("AssinouContratoFornecedor").value=="Sim"){
+					document.getElementById('idAssinouFornecedor').style.display = 'none';	// oculto
+					
+				} else{
+					document.getElementById('idAssinouFornecedor').style.display = 'block';	// visivel
+				}
+							
+			}
+			
+			function carta_contrato(component){
+				if (document.getElementById("numeroContrato").value == ""){
+					alert("favor digite o Número da carta contrato");
+					document.getElementById("check_contrato").checked = false;
+				}else{
+					if(document.getElementById("check_contrato").checked == true){
+						
+						showCamera(component,'0001_-_CARTA_CONTRATO_ORDEM_SERVICO_'+document.getElementById("numeroContrato").value+'.pdf');						
+					}
+					}
+				
+				
+			}
+			
+			
+			function carta_contrato_assinado(component){
+				if (document.getElementById("numeroContrato").value == ""){
+					alert("favor digite o Número da carta contrato");
+					document.getElementById("check_contrato").checked = false;
+				}else{
+					if(document.getElementById("check_contrato").checked == true){
+						
+						showCamera(component,'0009_-_CARTA_CONTRATO_ORDEM_SERVICO_ASSINADO_'+document.getElementById("numeroContrato").value+'.pdf');						
+					}
+					}
+				
+				
+			}
+
+			function validaServico(campo){
+				var campoName= campo.name;
+				var indice 			= campoName.replace("projeto_zoom___", "");
+				
+				
+				if(document.getElementById("servico___"+ indice).value == ''){
+					alert("favor digite o Tipo de ServiÃ§o que vai ser executado primeiro");
+				}
+				
+			}
+/*
+			function preenche(campo){
+				var totalLinhas = parseInt($("#tb_pagamentos tbody tr:visible").length);
+				var posicao = campo.id.split("___");
+				var parcelas = parseInt(document.getElementById("parcelas").value);
+				var valor = parseFloat(document.getElementById("totalitens").value.replace(".","").replace(",","."))/parcelas;
+				//alert(parseFloat(document.getElementById("totalitens").value));
+
+				document.getElementById("TenviaParaPagamentos___"+posicao[1]).value = document.getElementById("nomeLogado").value;
+				document.getElementById("parecerTenviaParaPagamentos___"+posicao[1]).value = "Nota Fiscal.: "+document.getElementById("pag_nf___"+posicao[1]).value+",  Parcela "+ totalLinhas+" do Contrato "+document.getElementById("numeroContrato").value+", " +document.getElementById("justificativa").value;
+				document.getElementById("pag_parcela___"+posicao[1]).value = totalLinhas;
+				document.getElementById("pag_valor___"+posicao[1]).value = formatMoeda(valor);
+				var data = new Date();
+				var dia = String(data.getDate()).padStart(2, '0');
+				var mes = String(data.getMonth() + 1).padStart(2, '0');
+				var ano = data.getFullYear();
+				dataAtual = dia + '/' + mes + '/' + ano;
+				document.getElementById('pag_data___'+posicao[1]).value=dataAtual;
+
+				calculaTotalGeralpag();
+				document.getElementById(posicao[0]).value = document.getElementById("pag_nf___"+posicao[1]).value;
+
+			}
+*/
+
+function parcela(){
+	var parcelas = parseInt(document.getElementById("parcelas").value);
+	var pag_parcela_f = parseInt((document.getElementById("pag_parcela_f").value=="")?0:document.getElementById("pag_parcela_f").value);
+
+	if(parcelas>pag_parcela_f){
+		pag_parcela_f +=1;
+		document.getElementById("pag_parcela_f").value = pag_parcela_f;
+		var data = new Date();
+				var dia = String(data.getDate()).padStart(2, '0');
+				var mes = String(data.getMonth() + 1).padStart(2, '0');
+				var ano = data.getFullYear();
+				dataAtual = dia + '/' + mes + '/' + ano;
+				document.getElementById('pag_data_f').value=dataAtual;
+
+
+		
+		
+	}
+
+	calcpago();
+}
+
+function calcpago(){
+	var parcelas = parseInt(document.getElementById("parcelas").value);
+	var pag_parcela_f = parseInt((document.getElementById("pag_parcela_f").value=="")?0:document.getElementById("pag_parcela_f").value);
+	var totalitens = parseFloat((document.getElementById("totalitens").value.replace(".","").replace(",",".")=="")?0:document.getElementById("totalitens").value.replace(".","").replace(",","."));
+	var pag_pago_atual_f = parseFloat((document.getElementById("pag_pago_atual_f").value.replace(".","").replace(",",".")=="")?0:document.getElementById("pag_pago_atual_f").value.replace(".","").replace(",","."));
+	var totalitenspag = parseFloat((document.getElementById("totalitenspag").value.replace(".","").replace(",",".")=="")?0:document.getElementById("totalitenspag").value.replace(".","").replace(",","."));
+	var saldoitenspag = parseFloat((document.getElementById("saldoitenspag").value.replace(".","").replace(",",".")=="")?0:document.getElementById("saldoitenspag").value.replace(".","").replace(",","."));
+
+	document.getElementById("totalitenspag").value = formatMoeda(totalitenspag+pag_pago_atual_f);
+	document.getElementById("saldoitenspag").value  = totalitens-(totalitenspag+pag_pago_atual_f);
+
+}
+			function preenchepag(campo){
+
+				var parcelas = parseInt(document.getElementById("parcelas").value );
+				
+				if(parcelas== 1 ) {
+					parcelas="Unica";
+				}else{
+					parcelas=document.getElementById("pag_parcela_f").value+"/"+parcelas;
+				}
+				document.getElementById(campo.id).value =  "Nota Fiscal.: "+document.getElementById("pag_nf_f").value+",  Parcela "+ parcelas +" do Contrato "+document.getElementById("numeroContrato").value+", " +document.getElementById("justificativa").value;
+
+			}
+
+			function inserepag(){
+				//alert("Entrou");
+				var totalLinhas = parseInt($("#tb_pagamentos tbody tr:visible").length);
+				var parcelas = parseInt(document.getElementById("parcelas").value);
+				
+
+			//	alert(totalLinhas);
+				if( totalLinhas < parcelas){
+					wdkAddChild("tb_pagamentos");
+					document.getElementById('add_pag').style.display = 'none';	// oculto
+					
+				}else{
+					alert("Reveja numero de parcelas");
+				}
+				
+			/*	var totalLinhas = $("#tb_pagamentos tbody tr:visible").length;
+				alert(totalLinhas);
+				var linhas = $("#tb_pagamentos tbody tr:visible");
+				alert(linhas);
+				var Linha = $(linhas[totalLinhas]).find("input[name^=TenviaParaPagamentos___]").context.id;
+				//.cells.lastElementChild.id;
+				//.context.id;
+				var l = Linha.split("___");
+				alert(l[1]);
+				document.getElementById("TenviaParaPagamentos___"+l).value = document.getElementById("nomeLogado").value;
+			*/			
+				
+
+			}
+			
+			
+			function rateiopag(campo){
+
+
+			    var campoName		= campo.name;
+				var indice 			= campoName.replace("pag_valor___", "");
+				var valorRateio		= campo.value;
+				var totalitens		= parseFloat(document.getElementById("totalitens").value);
+				var totalitenspag	= parseFloat(document.getElementById("totalitenspag").value);
+				//document.getElementById("pag_valor___" + indice).value=valorRateio.replace("R$","").replace(".","").replace(",",".");
+
+				if((parseFloat(valorRateio)+totalitenspag) <= totalitens) {
+					//document.getElementById("pag_valor___" + indice).value=formatMoeda(valorRateio.replace("R$","").replace(".","").replace(".","").replace(",","."));
+					document.getElementById(campo.name).value=formatMoeda(valorRateio.replace("R$","").replace(".","").replace(".","").replace(",","."));
+					calculaTotalGeralpag();
+				}else{
+					alert("Valor maior que o valor do contrato");
+				}
+
+				
+			}
+
+			function calculaTotalGeralpag(){
+				//totalItem
+				
+				
+				var rows = document.getElementById("tb_pagamentos").getElementsByTagName("tbody")[0].getElementsByTagName("tr");  
+				var linhas = rows.length -1;
+				var totalGeral = 0.00
+				var num =0;
+								
+				
+				for (var i = 1; i <= 100; i++) {
+					
+					
+					if(document.getElementById("pag_valor___" + (i)) !== undefined){
+						num++;
+						totalGeral += parseFloat(document.getElementById("pag_valor___" + (i)).value.replace(".","").replace(",","."));
+						if(num >= linhas){
+							break;
+						}
+					}
+					
+				}
+				
+				document.getElementById("totalitenspag").value = formatMoeda(totalGeral);
+							
+			}
+			
+			
+			function rateio1(campo){
+
+
+			    var campoName		= campo.name;
+				var indice 			= campoName.replace("valorRatMoeda___", "");
+				
+				var valorRateio		= campo.value;
+				document.getElementById("valorRateio___" + indice).value=valorRateio.replace("R$","").replace(".","").replace(",",".");
+				document.getElementById("valorRatMoeda___" + indice).value=formatMoeda(valorRateio.replace("R$","").replace(".","").replace(".","").replace(",","."));
+
+				
+				calculaTotalGeral();
+				
+			}
+
+			function calculaTotalGeral(){
+				//totalItem
+				
+				
+				var rows = document.getElementById("tb_rateio").getElementsByTagName("tbody")[0].getElementsByTagName("tr");  
+				var linhas = rows.length -1;
+				var totalGeral = 0.00
+				var num =0;
+				var limitelicitacao = parseFloat(document.getElementById("limitelicitacao").value);
+				
+				
+				for (var i = 1; i <= 100; i++) {
+					
+					
+					if(document.getElementById("valorRateio___" + (i)) !== undefined){
+						num++;
+						totalGeral += parseFloat(document.getElementById("valorRateio___" + (i)).value.replace(",","."));
+						if(num >= linhas){
+							break;
+						}
+					}
+					
+				}
+				document.getElementById("totalitens").value = formatMoeda(totalGeral);
+				
+				var resultadolimite= parseFloat(totalGeral)/parseFloat(document.getElementById("limitelicitacao").value);
+				
+				
+				if(resultadolimite<=0.50){
+					
+					// 'Pool:Group:'
+					document.getElementById("assinatura1").value = 'Pool:Group:PREPOSTO_'+document.getElementById("diretoria").value;
+					document.getElementById("assinatura2").value = document.getElementById("codsuperior").value;
+					document.getElementById("resultado_limitelicitacao").value = resultadolimite;
+					document.getElementById("autoriza1").value = document.getElementById("codsuperior").value;
+					document.getElementById("caminho").value = 'gerente';
+					
+					
+				}
+				if(resultadolimite>0.50){
+					
+					document.getElementById("assinatura1").value = 'Pool:Group:PREPOSTO_'+document.getElementById("diretoria").value;
+					document.getElementById("assinatura2").value = document.getElementById("codsuperior").value;
+					document.getElementById("resultado_limitelicitacao").value = resultadolimite;
+					document.getElementById("autoriza1").value = 'Pool:Group:PREPOSTO_'+document.getElementById("diretoria").value;
+					document.getElementById("caminho").value = 'preposto';
+					
+				} 
+				if(resultadolimite>=1){
+					var diretoria1=document.getElementById("diretoria").value;
+					var diretoria2=document.getElementById("diretoria1").value;
+					var idultimaassinatura=document.getElementById("idultimaassinatura").value;
+					
+					
+					if(idultimaassinatura==diretoria1){
+						diretoria1=document.getElementById("diretoria1").value;
+						diretoria2=document.getElementById("diretoria").value;
+					}
+					
+					document.getElementById("assinatura1").value = 'Pool:Group:'+diretoria1;
+					document.getElementById("assinatura2").value = 'Pool:Group:'+diretoria2;
+					document.getElementById("resultado_limitelicitacao").value = resultadolimite;
+					document.getElementById("autoriza1").value = 'Pool:Group:'+document.getElementById("diretoria").value;;
+					document.getElementById("caminho").value = 'direx';
+					
+					
+				}
+				
+				
+			//	document.getElementById("valordiferenca").value = parseFloat(document.getElementById("valortotal").value)-totalGeral;
+				
+			}
+	          function showCamera(param) {
+	        	  //document.getElementById("checkbox").checked 
+				
+					 JSInterface.showCamera(param);
+								
+	          }
+			
+			  function mostraLista(item){
+				var selecionado = item.name;
+				var indice = (selecionado.replace("btnat___", "")=='btnat')?'':selecionado.replace("btnat___", "");
+				
+				document.getElementById('nd'+indice).style.display = 'block';
+				document.getElementById('nu'+indice).style.display = 'none';
+				
+			}
+
+			function setSelectedZoomItem(selectedItem) {
+				var selecionado = selectedItem.inputId;
+				var projetoSelec	= selecionado.replace("projeto_zoom___", "");
+				var acaoSelec		= selecionado.replace("acao_zoom___", "");
+				var unidadeSelec	= selecionado.replace("centroCusto_zoom___", "");
+				var ServicoSelec	= selecionado.replace("servico___", "");
+				var docsSelec	= selecionado.replace("DOCS___", "");
+				var docs			= "DOCS___" + docsSelec;
+				var Servico			= "servico___" + ServicoSelec;
+				var cCustoProjeto 	= "projeto_zoom___" + projetoSelec;
+				var cCustoAcao	 	= "acao_zoom___" + acaoSelec;
+				var cCustoUnidade	= "centroCusto_zoom___" + unidadeSelec;
+
+				var valorTotalItem	= document.getElementById("totalitens").value;
+				console.log("entrou select zoom "+ selecionado+", docs "+docs);
+
+				if(selectedItem.inputId == docs){
+					//console.log("entrou em "+ docs+" ")
+			//	var nomedoc = 
+					var unidade = document.getElementById("Unidade").value;
+					var siglaunidade = unidade.split(" -");
+					let ano = new Date().getFullYear();
+					document.getElementById("CODIGODOCS_filho___"+docsSelec).value =("0000" + docsSelec).slice(-4)+'_'+siglaunidade[0]+"_"+ano+"_"+selectedItem["CODIGO"]+"_"+document.getElementById("numeroContrato").value+".pdf";
+					document.getElementById("ORDEMDOCS___"+docsSelec).value =docsSelec;
+					
+					document.getElementById("CODIGODOCS").value =document.getElementById("CODIGODOCS_filho___"+docsSelec).value;
+					
+					//console.log("fim de "+ docs+" ");
+					
+					//showCamera(document.getElementById("CODIGODOCS_filho___"+docsSelec).value);
+					
+					/*NOME
+					CODIGO
+
+					id=CODIGO
+					document.getElementById("CODTB4FAT").value=selectedItem["CODTB4FAT"];
+					*/
+				}	
+				
+				if(selectedItem.inputId == "prodsebrae"){
+					
+					document.getElementById("CODTB4FAT").value=selectedItem["CODTB4FAT"];
+					
+				}	
+if(selectedItem.inputId == "departamento"){
+					
+					document.getElementById("coddepartamento").value=selectedItem["CODDEPARTAMENTO"];
+					
+				}
+				
+				
+if(selectedItem.inputId == "evento"){
+					
+					document.getElementById("CodEvento").value=selectedItem["CodEvento"];
+					document.getElementById("Sistema").value=selectedItem["Sistema"];
+					
+					
+				}
+				
+				
+				if(selectedItem.inputId == "credenciado"){
+					document.getElementById("bancocredenciado").value = selectedItem["DESCBANCO"];	
+					document.getElementById("fonecredenciado").value = selectedItem["FONE"];
+					document.getElementById("emailcredenciado").value = selectedItem["EMAIL"];
+					document.getElementById("idcredenciado").value = selectedItem["CODCFO"];
+			}
+				
+				
+				if(selectedItem.inputId == Servico){
+						document.getElementById("codtb1fat___"+ ServicoSelec).value = selectedItem["CODTB1FAT"];	
+						document.getElementById("idproduto___"+ ServicoSelec).value = selectedItem["IDPRD"];
+						document.getElementById("dscnatureza___"+ ServicoSelec).value = selectedItem["NATUREZA"];
+				}
+
+				
+				if(selectedItem.inputId == cCustoProjeto){
+					
+					var nomeCampoFiltro	= "acao_zoom___" + projetoSelec;		// Campo que recebera o Filtro.
+					
+					
+					//					$("#acao_zoom___" + projetoSelec).val('');
+	//				$("#validaProjeto___" + projetoSelec).val('OK');
+					
+					var codPorjetoA = selectedItem["CODCCUSTO"];	
+					
+					reloadZoomFilterValues(nomeCampoFiltro, "CODPROJETO,"+codPorjetoA  );	
+					
+				}
+				
+				if(selectedItem.inputId == cCustoAcao){
+					
+					var nomeCampoFiltro	= "centroCusto_zoom___" + acaoSelec;	// Campo que recebera o Filtro.	
+					
+					$("#centroCusto_zoom___" + acaoSelec).val('');
+					$("#validaAcao___" + acaoSelec).val('OK');
+
+					var codPrjAcao = selectedItem["CODCCUSTO"];
+					reloadZoomFilterValues(nomeCampoFiltro, "CODPRJACAO," +codPrjAcao );
+				
+				}
+				
+				if(selectedItem.inputId == cCustoUnidade){
+					
+					document.getElementById("codCusto___" + unidadeSelec).value = selectedItem["CODCCUSTO"];
+				}
+			}
+			
+			function anexadocs(ordem){
+				
+				var desc = ordem.name;
+				var iddoc = desc.split("___");
+				//console.log("doc "+ ordem.name+", "+ iddoc[1]+", CODIGODOCS_filho___"+iddoc[1]+", "+document.getElementById("CODIGODOCS_filho___"+iddoc[1]).value);
+						//document.getElementById("CODIGODOCS_filho___"+iddoc).value);
+				
+				
+			showCamera(document.getElementById("CODIGODOCS_filho___"+iddoc[1]).value);
+				
+			//	console.log("doc "+ ordem+", "+ ordem.inputId+", "+ordem.value);
+			}
+			
+				var keyDown = false, ctrl = 17, vKey = 86, Vkey = 118; 
+				  
+				$(document).keydown(function (e) {
+					if (e.keyCode == ctrl) keyDown = true;
+				}).keyup(function (e) {
+					if (e.keyCode == ctrl) keyDown = false;
+				});
+				
+				$('[data-only-numbers]').on('keypress', function (e) {
+				    if (!e) {
+					    var e = window.event;
+					}
+					
+				    if (e.keyCode > 0 && e.which == 0) {
+				    	 return true;
+					}
+					
+				    if (e.keyCode) {
+				        code = e.keyCode;
+					} else if (e.which) {
+				    	code = e.which;
+					}
+
+					if(code == 46) {
+						return true;
+					}
+					
+				    var character = String.fromCharCode(code);
+				    if (character == '\b' || character == ' ' || character == '\t') {
+				    	 return true;
+					}
+				    if (keyDown && (code == vKey || code == Vkey)) {
+				    	return (character);
+					} else  {
+						return (/[0-9]$/.test(character));
+					}
+				}).on('focusout', function (e) {
+				    var $this = $(this);
+					if($this.val() == "") {
+						return true;
+					}
+				    $this.val($this.val().replace(/[^0-9\.]/g, ''));
+				}).on('paste', function (e) {
+				    var $this = $(this);
+				    setTimeout(function () {
+				        $this.val($this.val().replace(/[^0-9\.]/g, ''));
+				    }, 5);
+				 });				
+
+				
+
+				$('.create-form-components').on('keyup', 'input[required="required"][type="text"], input[required="required"][type="number"], input[required="required"][type="date"], textarea[required="required"]', function(){
+					validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
+				});
+
+				$('.create-form-components').on('change', 'input[required="required"][type="checkbox"], input[required="required"][type="radio"], select[required="required"]', function(){
+					validationFieldsForm($(this), $(this).parents('.form-field').data('type'));
+				});
+
+				function validationFieldsForm(field, type){
+					if(type === "checkbox" || type === "radio"){
+						if(!field.is(':checked')){
+							field.parents('.form-field').addClass('required');
+						}else{
+							field.parents('.form-field').removeClass('required');
+						}
+					}else{
+						if(!field.val().trim()){
+							field.parents('.form-field').addClass('required');
+						}else{
+							field.parents('.form-field').removeClass('required');
+						}
+					}
+				}
+
+				var $zoomPreview = $(".zoom-preview");
+				if ($zoomPreview.length) {
+                    $zoomPreview.parent().removeClass("input-group");
+                    $zoomPreview.remove();
+                }
+
+				var ratings = $(".rating");
+				if (ratings.length > 0) ratingStars(ratings);
+				function ratingStars(stars) {
+					$.each(stars, function(i, obj) {
+                        var field = $(this).closest(".form-group").find(".rating-value");
+						var tgt = $(obj);
+						tgt.html("");
+						var rating = FLUIGC.stars(tgt, { value: field.val() });
+                        rating.on("click", function(o) {
+                            field.val($(this).index() + 1);
+                        });
+					});
+				}
+
+				$.each($("[data-date]"), function(i, o) {
+                    var id = $(o).attr("id");
+					FLUIGC.calendar("#" + id);
+				});
+
+				$(document).ready(function() {
+					$.each($("[data-date]"), function(i, o) {
+	                    var id = $(o).attr("id");
+	                    if($("#" + id).attr("readonly")) {
+	                    	$("#" + id).data('DateTimePicker').disable();
+	                    }
+					});
+				});
+				
+				/*FunÃ§Ã£o para formatar numero em moeda*/
+				function formatMoeda(valor){
+					
+					var v = valor.toString();	
+					
+					if (v != ""){
+						
+						var aValores = v.split('.');
+						if (aValores.length <= 1)
+							v += '00';
+						else{
+							if (aValores[1].toString().length <= 1)
+								v = aValores[0].toString() + aValores[1].toString() + '0';
+							else{
+								
+								//Formata valor em 2 casas decimais
+								var valor = parseFloat(v);
+								valor = valor.toFixed(2);
+								v = valor.toString();
+							}
+						}
+					}
+							
+					v=v.replace(/\D/g,""); // permite digitar apenas numero 
+					v=v.replace(/(\d{1})(\d{14})$/,"$1.$2"); 	// coloca ponto antes dos ultimos digitos 
+					v=v.replace(/(\d{1})(\d{11})$/,"$1.$2"); 	// coloca ponto antes dos ultimos 11 digitos 
+					v=v.replace(/(\d{1})(\d{8})$/,"$1.$2"); 	// coloca ponto antes dos ultimos 8 digitos 
+					v=v.replace(/(\d{1})(\d{5})$/,"$1.$2"); 	// coloca ponto antes dos ultimos 5 digitos 
+					v=v.replace(/(\d{1})(\d{1,2})$/,"$1,$2"); 	// coloca virgula antes dos ultimos 2 digitos 
+						
+					return v;
+				}
+				
+				
+				
+				function geratitulo(campo){
+					
+					document.getElementById("tituloComprometimento").value = document.getElementById("tituloComprometimento").value+", "+campo.value;
+				}
+				
+				function GerarRelatorioRM() {
+					
+					// cria uma nova janela para exibiÃÂÃÂ§ÃÂÃÂ£o do conteÃÂÃÂºdo do relatÃÂÃÂ³rio em PDF
+					
+					newWindow = window.open('RMReports', 'RrptPag'+document.getElementById("idmov").value);
+					newWindow.document.write("<iframe id='iFrameReport' width='100%' height='100%' src='" + getBytesRMReport(document.getElementById("idmov").value) + "'></iframe>");
+				}
+				
+				function AJUDA() {
+					
+					// cria uma nova janela para exibiÃÂÃÂ§ÃÂÃÂ£o do conteÃÂÃÂºdo do relatÃÂÃÂ³rio em PDF
+					newWindow = window.open('AJUDA', 'https://fluig.ma.sebrae.com.br/portal/p/1/ecmnavigation?app_ecm_navigation_doc=116701');
+					newWindow.document.write("<iframe id='iFrameReport' width='100%' height='100%' src='https://fluig.ma.sebrae.com.br/portal/p/1/ecmnavigation?app_ecm_navigation_doc=116701'></iframe>");
+				}
+
+
+
+
+				
+				
+				function getBytesRMReport(codigo) {
+				//var codigo=""; 
+					//var codigo = document.getElementById("idmov").value;
+					// Constraint com o identificador do boleto que serÃÂÃÂ¡ utilizado para geraÃÂÃÂ§ÃÂÃÂ£o do realtÃÂÃÂ³rio
+					
+					var IdBoleto = DatasetFactory.createConstraint("Idpagamento", ""+codigo+"" , ""+codigo+"" , ConstraintType.MUST);
+					
+					var constraints = new Array(IdBoleto);
+
+					var resultado = "";
+
+					// dsRelatorioWs ÃÂÃÂ© identificador do DataSet exportado para o Fluig
+					var dataset = DatasetFactory.getDataset("ds_rm_rpt_pagamento", null, constraints, null);
+					var wsReport = dataset.values[0];
+
+					// seta o formato de abertura da string base 64 retornada pelo Web Service do RM Reports para PDF
+					if (dataset.values.length == 1) {
+						resultado = "data:application/pdf;base64, " + wsReport["RELATORIO"];
+						
+					}
+	return resultado;
+				}
+				
+
+				function GerarContratoRM() {
+					
+						var cod=document.getElementById("idcontrato").value;
+					
+					// cria uma nova janela para exibiÃ§Ã£o do conteÃºdo do relatÃ³rio em PDF
+					newWindow = window.open('RMReports', 'pagina');
+					newWindow.document.write("<iframe id='iFrameReport' width='100%' height='100%' src='" + getBytesRMReportcontrato(cod) + "'></iframe>");
+				}
+
+
+				function getBytesRMReportcontrato(idcnt) {
+
+					// Constraint com o identificador do boleto que serÃ¡ utilizado para geraÃ§Ã£o do realtÃ³rio
+					//alert("IDCNT "+idcnt);
+					var IdBoleto = DatasetFactory.createConstraint("IDCNT", idcnt, idcnt, ConstraintType.MUST);
+					//var IdBoleto1 = DatasetFactory.createConstraint("Idrpt", rpt, rpt, ConstraintType.MUST);
+					var constraints = new Array(IdBoleto);
+
+					var resultado = "";
+
+					// dsRelatorioWs Ã© identificador do DataSet exportado para o Fluig
+					var dataset = DatasetFactory.getDataset("ds_rm_rpt_contrato", null, constraints, null);
+					var wsReport = dataset.values[0];
+
+					// seta o formato de abertura da string base 64 retornada pelo Web Service do RM Reports para PDF
+					if (dataset.values.length == 1) {
+						resultado = "data:application/pdf;base64, " + wsReport["RELATORIO"];
+						
+					}
+
+					return resultado;
+				}
+
+
+			</script>
+		</body>
+	</html>
